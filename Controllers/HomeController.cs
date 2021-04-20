@@ -23,7 +23,7 @@ namespace ClassificationApp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Categories()
         {
             return View();
         }

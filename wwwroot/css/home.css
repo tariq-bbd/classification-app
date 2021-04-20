@@ -1,0 +1,137 @@
+﻿.home-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.image-container {
+    flex: 1;
+}
+
+    .image-container img {
+        width: 80%;
+    }
+
+.welcome-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+    .welcome-section h1 {
+        color: rgb(251, 250, 245);
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 5em;
+    }
+
+    .welcome-section p {
+        margin-top: 1em;
+        color: rgb(240, 240, 240);
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+    }
+
+    .welcome-section :is(h1, p) {
+        align-self: flex-start;
+    }
+
+.rounded-button {
+    margin-top: 1em;
+    display: grid;
+    place-items: center;
+    align-self: center;
+    height: 75px;
+    width: 350px;
+    border-radius: 30px;
+    border: 2px solid rgb(22,201,201);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    background: linear-gradient(to right, rgb(22,201,201) 50%, rgba(255,0,0,0) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    text-decoration: none;
+    color: rgb(240, 240, 240) !important;
+}
+
+    .rounded-button:hover {
+        background-position: left bottom;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+.categories-container {
+    box-sizing: border-box;
+    padding: 5%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .categories-container .heading h1 {
+        color: rgb(251, 250, 245);
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 5em;
+        text-align: center;
+    }
+
+    .categories-container .heading p {
+        margin-top: 1em;
+        color: rgb(240, 240, 240);
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .categories-container .categories {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+        .categories-container .categories .category {
+            width: 375px;
+            height: 375px;
+            margin: 2rem;
+            border-radius: 2rem;
+            background: rgb(22,201,201);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+            .categories-container .categories .category:hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+.categories .category i {
+    font-size: 6rem;
+    color: rgb(22,17,17);
+}
+
+.categories .category span {
+    margin-top: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5rem;
+    color: rgb(22,17,17);
+}
+
+@media only screen and (max-width: 1000px) {
+    .image-container {
+        display: none;
+    }
+}

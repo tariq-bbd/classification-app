@@ -1,0 +1,71 @@
+﻿.form-root {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.form-header {
+    color: rgb(251, 250, 245);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+
+.form-container {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 2rem 0;
+}
+
+form {
+    padding: 2% 5%;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    background-color: rgb(22,201,201);
+}
+
+    form label {
+        font-weight: 500;
+        font-family: Roboto, sans-serif;
+    }
+
+    form input {
+        border-radius: 15px !important;
+        height: 40px !important;
+        font-family: Roboto, sans-serif;
+    }
+
+        form input:hover {
+            border: 2px solid rgb(22,17,17);
+        }
+
+.btn-form {
+    font-family: Roboto, sans-serif;
+    width: 50%;
+    border-radius: 2rem;
+    background-color: rgb(22,17,17);
+    border: none;
+    color: rgb(251, 250, 245);
+    height: 50px;
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all linear 0.25s;
+    margin-top: 1rem;
+}
+
+    .btn-form:hover {
+        background-color: rgb(255,200,61);
+        color: rgb(22,17,17);
+    }
+
+@media only screen and (max-width: 1000px) {
+    .form-container {
+        width: 80%;
+    }
+}

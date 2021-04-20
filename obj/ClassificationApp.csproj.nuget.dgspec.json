@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dev\\ClassificationApp\\ClassificationApp.csproj": {}
+    "C:\\Users\\Ludevin\\Documents\\GitHub\\classification-app\\ClassificationApp.csproj": {}
   },
   "projects": {
-    "D:\\Dev\\ClassificationApp\\ClassificationApp.csproj": {
+    "C:\\Users\\Ludevin\\Documents\\GitHub\\classification-app\\ClassificationApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dev\\ClassificationApp\\ClassificationApp.csproj",
+        "projectUniqueName": "C:\\Users\\Ludevin\\Documents\\GitHub\\classification-app\\ClassificationApp.csproj",
         "projectName": "ClassificationApp",
-        "projectPath": "D:\\Dev\\ClassificationApp\\ClassificationApp.csproj",
-        "packagesPath": "C:\\Users\\bbdnet2312\\.nuget\\packages\\",
-        "outputPath": "D:\\Dev\\ClassificationApp\\obj\\",
+        "projectPath": "C:\\Users\\Ludevin\\Documents\\GitHub\\classification-app\\ClassificationApp.csproj",
+        "packagesPath": "C:\\Users\\Ludevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ludevin\\Documents\\GitHub\\classification-app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\bbdnet2312\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ludevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,8 +25,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Sandbox\\Discovery\\boa.services.errormonitor\\publish": {},
-          "C:\\Users\\bbdnet2312\\Documents\\BBD Config": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -51,17 +49,23 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[5.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
             }
@@ -84,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
