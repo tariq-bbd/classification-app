@@ -1,0 +1,39 @@
+﻿@model ClassificationApp.Models.PatientModel
+@{
+    Layout = "_PredictionFormLayout";
+    ViewData["Title"] = "Stroke Prediction";
+    ViewData["Header"] = "Stroke Prediction";
+}
+
+<form asp-action="Stroke" asp-controller="Prediction">
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MiddleName"></label>
+        <input asp-for="MiddleName" class="form-control" />
+        <span asp-validation-for="MiddleName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control" min="0" max="@int.MaxValue" value="0" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender"></label>
+        <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+            <option selected="selected" value="">Please select...</option>
+        </select>
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn-form">Submit</button>
+</form>
+
+

@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Categories";
+    var categories = new[]
+    {
+        new { text="Stroke", icon="fas fa-swimmer", action="Stroke" },
+        new { text="Heart Attack", icon ="fas fa-heart-broken", action="HeartAttack"}
+    };
+
+}
+@section usage
+{
+    <link href="~/css/home.css" rel="stylesheet" />
+}
+
+<div class="categories-container">
+    <div class="heading">
+        <h1>Categories</h1>
+        <p>Please select a category you'd like to be diagnosed for:</p>
+    </div>
+    <div class="categories">
+        @foreach (var cat in categories)
+        {
+            <a class="category" asp-controller="Prediction" asp-action=@cat.action>
+                <i class="@cat.icon"></i>
+                <span>@cat.text</span>
+            </a>
+
+        }
+    </div>
+</div>
