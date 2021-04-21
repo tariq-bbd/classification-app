@@ -7445,23 +7445,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ludevin\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\bbdnet2244\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ludevin\\Documents\\GitHub\\classification-app\\ClassificationApp.csproj",
+      "projectUniqueName": "C:\\Users\\bbdnet2244\\Documents\\GitHub\\classification-app\\ClassificationApp.csproj",
       "projectName": "ClassificationApp",
-      "projectPath": "C:\\Users\\Ludevin\\Documents\\GitHub\\classification-app\\ClassificationApp.csproj",
-      "packagesPath": "C:\\Users\\Ludevin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ludevin\\Documents\\GitHub\\classification-app\\obj\\",
+      "projectPath": "C:\\Users\\bbdnet2244\\Documents\\GitHub\\classification-app\\ClassificationApp.csproj",
+      "packagesPath": "C:\\Users\\bbdnet2244\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bbdnet2244\\Documents\\GitHub\\classification-app\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Ludevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bbdnet2244\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7532,7 +7528,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

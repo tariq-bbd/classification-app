@@ -13,6 +13,10 @@ namespace ClassificationApp.Controllers
         {
             return View();
         }
+        public IActionResult HeartAttack()
+        {
+            return View();
+        }
 
         [HttpPost, ValidateAntiForgeryToken]
         public IActionResult Stroke(PatientModel model)
