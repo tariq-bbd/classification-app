@@ -8,7 +8,9 @@ namespace ClassificationApp.Constants
 {
     public enum ResidenceType
     {
-        [Display(Name = "Apartment")]
-        APARTMENT
+        [Display(Name = "Urban")]
+        URBAN,
+        [Display(Name = "Rural")]
+        RURAL
     }
 }

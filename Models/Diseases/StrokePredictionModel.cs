@@ -15,18 +15,20 @@ namespace ClassificationApp.Models.Diseases
         public int Age { get; set; }
 
         [Required]
-        public int HasHypertension { get; set; }
+        [Display(Name = "Hypertention")]
+        public bool HasHypertension { get; set; }
 
         [Required]
-        public int HasHeartDisease { get; set; }
+        [Display(Name = "Heart Disease")]
+        public bool HasHeartDisease { get; set; }
 
         [Required]
-        [MaxLength(250)]
-        public string EverMarried { get; set; }
+        [Display(Name = "Ever Married")]
+        public bool EverMarried { get; set; }
 
         [Required]
-        [MaxLength(250)]
-        public string WorkType { get; set; }
+        [EnumDataType(typeof(WorkType))]
+        public WorkType WorkType { get; set; }
 
         [Required]
         [EnumDataType(typeof(ResidenceType))]

@@ -4,11 +4,13 @@ namespace ClassificationApp.Constants
 {
     public enum SmokeStatus
     {
-        [Display(Name = "Don't Smoke")]
-        NON_SMOKER,
-        [Display(Name = "Occasionally Smoke")]
-        OCCASIONAL,
-        [Display(Name = "Smoke Regularly")]
-        SMOKER
+        [Display(Name = "Formerly Smoked")]
+        FORMERLY_SMOKED,
+        [Display(Name = "Never Smoked")]
+        NEVER_SMOKED,
+        [Display(Name = "Smokes")]
+        SMOKES,
+        [Display(Name = "Unknown")]
+        UNKNOWN
     }
 }
