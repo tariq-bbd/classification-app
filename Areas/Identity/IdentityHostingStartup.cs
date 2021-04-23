@@ -14,12 +14,6 @@ namespace ClassificationApp.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {
-        private IConfiguration Configuration;
-        private string _connString;
-        public IdentityHostingStartup(IConfiguration config)
-        {
-            Configuration = config;
-        }
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
