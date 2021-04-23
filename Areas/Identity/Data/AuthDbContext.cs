@@ -16,6 +16,11 @@ namespace ClassificationApp.Data
         {
         }
 
+        public AuthDbContext()
+        {
+            
+        }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

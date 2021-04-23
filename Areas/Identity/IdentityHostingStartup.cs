@@ -4,6 +4,7 @@ using ClassificationApp.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,13 +14,17 @@ namespace ClassificationApp.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {
+        private IConfiguration Configuration;
+        private string _connString;
+        public IdentityHostingStartup(IConfiguration config)
+        {
+            Configuration = config;
+        }
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) => {
-                services.AddDbContext<AuthDbContext>(options =>
-                    options.UseSqlServer(
-                        context.Configuration.GetConnectionString("DefaultConnection")));
 
+            
                 services.AddDefaultIdentity<DiagnoseMeUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<AuthDbContext>();
             });
