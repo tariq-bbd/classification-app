@@ -25,20 +25,16 @@ namespace ClassificationApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            var builder = new SqlConnectionStringBuilder();
+             var builder = new SqlConnectionStringBuilder();
             builder.DataSource = Configuration["DB-DataSource"];
             builder.InitialCatalog = Configuration["DB-InitialCatalog"];
-            builder.UserID = Configuration["DB-UserID"];
-            builder.Password = Configuration["DB-Password"];
+            builder.UserID = "bbdazuresqlserveradmin";//Configuration["DB-UserID"];
+            builder.Password = "@DmB69SSXeWfge";//Configuration["DB-Password"];
             _connString = builder.ConnectionString;
-
             services.AddDbContext<AuthDbContext>(options =>
-                options.UseSqlServer(_connString));
-            services.AddDatabaseDeveloperPageExceptionFilter();
-
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            {
+            options.UseSqlServer(_connString);
+            });
 
             services.AddAuthentication()
             .AddGoogle(
@@ -46,12 +42,13 @@ namespace ClassificationApp
                 {
                     options.ClientId = Configuration["Google-Auth-ClientID"];
                     options.ClientSecret = Configuration["Google-Auth-ClientSecret"];
-                    options.CallbackPath ="auth/google-signin";
+                    options.CallbackPath = "/auth/google-signin";
                 }
             ).AddCookie();
 
             services.AddHttpClient<IDiagnoseMeClient, DiagnoseMeClient>();
             services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
