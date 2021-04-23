@@ -22,7 +22,7 @@ namespace ClassificationApp.Controllers
                 return View(model);
             }
             ViewBag.success = "success";
-            return View();
+            return Content("success");
         }
     }
 }
