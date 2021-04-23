@@ -1,9 +1,5 @@
-﻿using ClassificationApp.Models;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
+using ClassificationApp.Models.Diseases;
 
 namespace ClassificationApp.Controllers
 {
@@ -19,7 +15,7 @@ namespace ClassificationApp.Controllers
         }
 
         [HttpPost, ValidateAntiForgeryToken]
-        public IActionResult Stroke(PatientModel model)
+        public IActionResult Stroke(StrokePredictionModel model)
         {
             if (!ModelState.IsValid)
             {

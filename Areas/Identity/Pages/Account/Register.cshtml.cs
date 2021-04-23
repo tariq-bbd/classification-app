@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using ClassificationApp.Constants;
 
 namespace ClassificationApp.Areas.Identity.Pages.Account
 {
@@ -46,16 +47,36 @@ namespace ClassificationApp.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-
+            [PersonalData]
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "First Name")]
+            [MaxLength(250)]
             public string FirstName { get; set; }
 
+            [PersonalData]
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "Middle Name")]
+            [MaxLength(250)]
+            public string MiddleName { get; set; }
+
+            [PersonalData]
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "Last Name")]
+            [MaxLength(250)]
             public string LastName { get; set; }
+
+            [PersonalData]
+            [Required]
+            [Range(0, int.MaxValue)]
+            public int Age { get; set; }
+
+            [PersonalData]
+            [Required]
+            [EnumDataType(typeof(Sex))]
+            public Sex Gender { get; set; }
 
             [Required]
             [EmailAddress]
@@ -86,7 +107,15 @@ namespace ClassificationApp.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new DiagnoseMeUser { UserName = Input.Email, Email = Input.Email, FirstName = Input.FirstName, LastName = Input.LastName };
+                var user = new DiagnoseMeUser {
+                    UserName = Input.Email,
+                    Email = Input.Email,
+                    FirstName = Input.FirstName,
+                    MiddleName = Input.MiddleName,
+                    LastName = Input.LastName,
+                    Gender = Input.Gender,
+                    Age = Input.Age,
+                };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

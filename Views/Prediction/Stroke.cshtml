@@ -1,37 +1,79 @@
-﻿@model ClassificationApp.Models.PatientModel
+﻿@model ClassificationApp.Models.Diseases.StrokePredictionModel
+@using ClassificationApp.Constants
+
 @{
     Layout = "_PredictionFormLayout";
     ViewData["Title"] = "Stroke Prediction";
     ViewData["Header"] = "Stroke Prediction";
+
+    int maxAge = 150;
+    int maxGlucoseLevel = 150;
+    double maxBMI = 45;
 }
 
 <form asp-action="Stroke" asp-controller="Prediction">
     <div class="form-group">
-        <label asp-for="FirstName"></label>
-        <input asp-for="FirstName" class="form-control" />
-        <span asp-validation-for="FirstName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="MiddleName"></label>
-        <input asp-for="MiddleName" class="form-control" />
-        <span asp-validation-for="MiddleName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="LastName"></label>
-        <input asp-for="LastName" class="form-control" />
-        <span asp-validation-for="LastName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Age"></label>
-        <input asp-for="Age" class="form-control" min="0" max="@int.MaxValue" value="0" />
-        <span asp-validation-for="Age" class="text-danger"></span>
-    </div>
-    <div class="form-group">
         <label asp-for="Gender"></label>
-        <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+        <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Sex>()">
             <option selected="selected" value="">Please select...</option>
         </select>
         <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control" min="0" max="@maxAge" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="WorkType"></label>
+        <select asp-for="WorkType" class="form-control" asp-items="Html.GetEnumSelectList<WorkType>()">
+            <option selected="selected" value="">Please select...</option>
+        </select>
+        <span asp-validation-for="WorkType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ResidenceType"></label>
+        <select asp-for="ResidenceType" class="form-control" asp-items="Html.GetEnumSelectList<ResidenceType>()">
+            <option selected="selected" value="">Please select...</option>
+        </select>
+        <span asp-validation-for="ResidenceType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SmokingStatus"></label>
+        <select asp-for="SmokingStatus" class="form-control" asp-items="Html.GetEnumSelectList<SmokeStatus>()">
+            <option selected="selected" value="">Please select...</option>
+        </select>
+        <span asp-validation-for="ResidenceType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AverageGlucoseLevel"></label>
+        <input asp-for="AverageGlucoseLevel" class="form-control" min="0" max="@maxGlucoseLevel" />
+        <span asp-validation-for="AverageGlucoseLevel" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BMI"></label>
+        <input asp-for="BMI" class="form-control" min="0" max="@maxBMI" />
+        <span asp-validation-for="BMI" class="text-danger"></span>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <div class="checkbox">
+                <input asp-for="HasHypertension" />
+                <label asp-for="HasHypertension"></label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="checkbox">
+                <input asp-for="HasHeartDisease" />
+                <label asp-for="HasHeartDisease"></label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="checkbox">
+                <input asp-for="EverMarried" />
+                <label asp-for="EverMarried"></label>
+            </div>
+        </div>
     </div>
     <button type="submit" class="btn-form">Submit</button>
 </form>
