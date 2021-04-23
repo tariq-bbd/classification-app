@@ -1,10 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ClassificationApp.Models.Diseases;
+using ClassificationApp.Models.Services;
+using System.Threading.Tasks;
+using System.Net;
 
 namespace ClassificationApp.Controllers
 {
     public class PredictionController : Controller
     {
+
+        private IDiagnoseMeClient _diagnoseMeService;
+
+        public PredictionController(IDiagnoseMeClient diagnoseMeService)
+        {
+            _diagnoseMeService = diagnoseMeService;
+        }
+
         public IActionResult Stroke()
         {
             return View();
@@ -15,14 +26,14 @@ namespace ClassificationApp.Controllers
         }
 
         [HttpPost, ValidateAntiForgeryToken]
-        public IActionResult Stroke(StrokePredictionModel model)
+        public async Task<IActionResult> Stroke(StrokePredictionModel model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
-            ViewBag.success = "success";
-            return Content("success");
+            string predictionResult = _diagnoseMeService.GetStrokePredictionResult(model).Result;
+            return Content(predictionResult);
         }
     }
 }

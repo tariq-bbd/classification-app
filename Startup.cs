@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using System.Globalization;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Identity;
+using ClassificationApp.Models.Services;
 
 namespace ClassificationApp
 {
@@ -49,6 +50,7 @@ namespace ClassificationApp
                 }
             ).AddCookie();
 
+            services.AddHttpClient<IDiagnoseMeClient, DiagnoseMeClient>();
             services.AddControllersWithViews();
         }
 
