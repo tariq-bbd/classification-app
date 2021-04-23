@@ -1,8 +1,93 @@
-﻿
+﻿@model ClassificationApp.Models.Diseases.HeartAttackPredictionModel
+@using ClassificationApp.Constants
+
 @{
-    ViewData["Title"] = "Heartdisease";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "_PredictionFormLayout";
+    ViewData["Title"] = "Heart Attack Prediction";
+    ViewData["Header"] = "Heart Attack Prediction";
+
+    int MaxAge = 150;
+    int ChestPainRange = 4;
+    int OldPeakRange = 5;
+    int SeveritySlope = 5;
 }
 
-<h1>Heartdisease</h1>
+@section formUsage {
+    <script>
+        function updateSliderValue(val, sliderID) {
+            document.getElementById(sliderID).textContent = val;
+        }
+    </script>
+}
+
+<form asp-action="Stroke" asp-controller="Prediction">
+    <div class="form-group">
+        <label asp-for="Sex"></label>
+        <select asp-for="Sex" class="form-control" asp-items="Html.GetEnumSelectList<Sex>()">
+            <option selected="selected" value="">Please select...</option>
+        </select>
+        <span asp-validation-for="Sex" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control" min="0" max="@MaxAge" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RestingBPS"></label>
+        <input asp-for="RestingBPS" class="form-control" min="0" max="@int.MaxValue" />
+        <span asp-validation-for="RestingBPS" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Cholesterol"></label>
+        <input asp-for="Cholesterol" class="form-control" min="0" max="@int.MaxValue" />
+        <span asp-validation-for="Cholesterol" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FastingBloodSugar"></label>
+        <input asp-for="FastingBloodSugar" class="form-control" min="0" max="@int.MaxValue" />
+        <span asp-validation-for="FastingBloodSugar" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaxHeartRate"></label>
+        <input asp-for="MaxHeartRate" class="form-control" min="0" max="@int.MaxValue" />
+        <span asp-validation-for="MaxHeartRate" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="OldPeakLevel"></label>
+        <div class="row">
+            <input class="slider" asp-for="OldPeakLevel" type="range" value="0" class="form-control" min="0" max="@OldPeakRange" onchange="updateSliderValue(this.value, 'old-peak-slider')" />
+            <strong><span class="slider-value" id="old-peak-slider">0</span></strong>
+        </div>
+        <span asp-validation-for="SeveritySlope" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ChestPainType"></label>
+        <div class="row">
+            <input class="slider" asp-for="ChestPainType" type="range" value="0" class="form-control" min="0" max="@ChestPainRange" onchange="updateSliderValue(this.value, 'chest-pain-slider')" />
+            <strong><span class="slider-value" id="chest-pain-slider">0</span></strong>
+        </div>
+        <span asp-validation-for="ChestPainType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SeveritySlope"></label>
+        <div class="row">
+            <input class="slider" asp-for="SeveritySlope" type="range" value="0" class="form-control" min="0" max="@SeveritySlope" onchange="updateSliderValue(this.value, 'st-slope-slider')" />
+            <strong><span class="slider-value" id="st-slope-slider">0</span></strong>
+        </div>
+        <span asp-validation-for="SeveritySlope" class="text-danger"></span>
+    </div>
+
+    <div class="row">
+        <div class="form-group">
+            <div class="checkbox">
+                <input asp-for="ExerciseAngia" />
+                <label asp-for="ExerciseAngia"></label>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn-form">Submit</button>
+</form>
 

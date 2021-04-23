@@ -9,6 +9,7 @@
     color: rgb(251, 250, 245);
     font-family: 'Ubuntu', sans-serif;
     font-size: 5rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -82,7 +83,34 @@ input[type='checkbox'] {
 
 .row {
     margin: 0;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.slider {
+    width: 90%;
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    height: 25px !important;
+    outline: none; /* Remove outline */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+    .slider:hover {
+        border: none;
+    }
+
+    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: 25px; /* Set a specific slider handle width */
+        height: 25px; /* Slider handle height */
+        background: black;
+        border-radius: 50%;
+        cursor: pointer; /* Cursor on hover */
+    }
 
 @media only screen and (max-width: 1000px) {
     .form-container {
