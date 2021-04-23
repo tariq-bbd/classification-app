@@ -24,14 +24,14 @@ namespace ClassificationApp
         public void ConfigureServices(IServiceCollection services)
         {
             
-            var builder = new SqlConnectionStringBuilder(Configuration.GetConnectionString(""));
+            var builder = new SqlConnectionStringBuilder();
             builder.DataSource = Configuration["DB-DataSource"];
             builder.InitialCatalog = Configuration["DB-InitialCatalog"];
             builder.UserID = Configuration["DB-UserID"];
             builder.Password = Configuration["DB-Password"];
             _connString = builder.ConnectionString;
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<AuthDbContext>(options =>
                 options.UseSqlServer(_connString));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
