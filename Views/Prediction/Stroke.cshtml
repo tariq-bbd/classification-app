@@ -7,6 +7,8 @@
     ViewData["Header"] = "Stroke Prediction";
 
     int maxAge = 150;
+    int maxGlucoseLevel = 150;
+    double maxBMI = 45;
 }
 
 <form asp-action="Stroke" asp-controller="Prediction">
@@ -21,6 +23,37 @@
         <label asp-for="Age"></label>
         <input asp-for="Age" class="form-control" min="0" max="@maxAge" />
         <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="WorkType"></label>
+        <select asp-for="WorkType" class="form-control" asp-items="Html.GetEnumSelectList<WorkType>()">
+            <option selected="selected" value="">Please select...</option>
+        </select>
+        <span asp-validation-for="WorkType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ResidenceType"></label>
+        <select asp-for="ResidenceType" class="form-control" asp-items="Html.GetEnumSelectList<ResidenceType>()">
+            <option selected="selected" value="">Please select...</option>
+        </select>
+        <span asp-validation-for="ResidenceType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SmokingStatus"></label>
+        <select asp-for="SmokingStatus" class="form-control" asp-items="Html.GetEnumSelectList<SmokeStatus>()">
+            <option selected="selected" value="">Please select...</option>
+        </select>
+        <span asp-validation-for="ResidenceType" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AverageGlucoseLevel"></label>
+        <input asp-for="AverageGlucoseLevel" class="form-control" min="0" max="@maxGlucoseLevel" />
+        <span asp-validation-for="AverageGlucoseLevel" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BMI"></label>
+        <input asp-for="BMI" class="form-control" min="0" max="@maxBMI" />
+        <span asp-validation-for="BMI" class="text-danger"></span>
     </div>
     <div class="row">
         <div class="form-group">

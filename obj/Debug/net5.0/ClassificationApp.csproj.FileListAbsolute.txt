@@ -332,3 +332,5 @@ C:\Users\bbdnet2244\Documents\GitHub\classification-app\obj\Debug\net5.0\Classif
 C:\Users\bbdnet2244\Documents\GitHub\classification-app\obj\Debug\net5.0\ClassificationApp.genruntimeconfig.cache
 C:\Users\bbdnet2244\Documents\GitHub\classification-app\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
 C:\Users\bbdnet2244\Documents\GitHub\classification-app\obj\Debug\net5.0\Razor\Views\Prediction\HeartAttack.cshtml.g.cs
+C:\Users\Ludevin\Documents\GitHub\classification-app\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\Ludevin\Documents\GitHub\classification-app\obj\Debug\net5.0\Razor\Views\Prediction\HeartAttack.cshtml.g.cs

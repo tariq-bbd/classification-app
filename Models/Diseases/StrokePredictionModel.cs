@@ -35,17 +35,17 @@ namespace ClassificationApp.Models.Diseases
         public ResidenceType ResidenceType { get; set; }
 
         [Required]
+        [Display(Name = "Average Glucose Level")]
         [Range(0, 250)]
         public double AverageGlucoseLevel { get; set; }
 
         [Required]
+        [Display(Name = "BMI")]
         public double BMI { get; set; }
 
         [Required]
         [EnumDataType(typeof(SmokeStatus))]
         public SmokeStatus SmokingStatus { get; set; }
 
-        [Required]
-        public bool HadStroke { get; set; }
     }
 }
