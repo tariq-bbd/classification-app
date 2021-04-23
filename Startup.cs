@@ -5,11 +5,14 @@ using ClassificationApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Identity;
 
 namespace ClassificationApp
 {
     public class Startup
     {
+        private string _connString;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -20,6 +23,31 @@ namespace ClassificationApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            var builder = new SqlConnectionStringBuilder(Configuration.GetConnectionString(""));
+            builder.DataSource = Configuration["DB-DataSource"];
+            builder.InitialCatalog = Configuration["DB-InitialCatalog"];
+            builder.UserID = Configuration["DB-UserID"];
+            builder.Password = Configuration["DB-Password"];
+            _connString = builder.ConnectionString;
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(_connString));
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddAuthentication()
+            .AddGoogle(
+                options =>
+                {
+                    options.ClientId = Configuration["Google-Auth-ClientID"];
+                    options.ClientSecret = Configuration["Google-Auth-ClientSecret"];
+                    options.CallbackPath ="auth/google-signin";
+                }
+            ).AddCookie();
+
             services.AddControllersWithViews();
         }
 
