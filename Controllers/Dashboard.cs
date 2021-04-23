@@ -4,14 +4,37 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Net.Http;
+using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace ClassificationApp.Controllers
 {
+    
     public class Dashboard : Controller
     {
+        private readonly IHttpClientFactory _clientFactory;
+        
         // GET: Dashboard
-        public ActionResult Index()
+
+        public Dashboard(IHttpClientFactory clientFactory)
         {
+            _clientFactory = clientFactory;
+        }
+        public  ActionResult Index()
+        {
+            var request = new HttpRequestMessage(HttpMethod.Get,
+            "https://v2.jokeapi.dev/joke/Any");
+            var client = _clientFactory.CreateClient();
+
+            var response =  client.Send(request);
+            if (response.IsSuccessStatusCode)
+            {
+                 var responseStream =  response.Content.ReadAsStringAsync().Result;
+                
+                ViewBag.response = JsonConvert.DeserializeObject( responseStream);
+                
+            }
             return View();
         }
 
