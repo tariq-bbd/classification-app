@@ -9,15 +9,69 @@
     int MaxAge = 150;
     int ChestPainRange = 4;
     int OldPeakRange = 5;
-    int SeveritySlope = 5;
+    int SeveritySlope = 3;
 }
 
-@section formUsage {
+@section formScripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+
     <script>
         function updateSliderValue(val, sliderID) {
             document.getElementById(sliderID).textContent = val;
         }
     </script>
+
+    <script>
+        $("#submit-btn").on("click", function (e) {
+            e.preventDefault();
+            $("form").validate();
+            if ($("form").valid()) {
+                var t = $("input[name='__RequestVerificationToken']").val();
+                $("body").addClass("loading");
+                $.ajax({
+                    url: "@Url.Action("HeartAttack")",
+                    method: "POST",
+                    headers:
+                    {
+                        "RequestVerificationToken": t
+                    },
+                    data: $("form").serialize(),
+                    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                    dataType: "json",
+                    success: function (res) {
+                        res = JSON.parse(res);
+                        if (res.hasOwnProperty('predictionResult')) {
+                            $("form").addClass("scale-out-center");
+                            $(".prediction-result-header").text('Probability of Heart Failure:\n\n');
+                            $(".prediction-result-text").text(res.predictionResult + '%');
+                            setTimeout(() => {
+                                $("form").css("display", "none");
+                                $("form").removeClass("scale-out-center");
+                                $("body").addClass("show-prediction-result");
+                                $(".prediction-result").css("display", "flex");
+                                $(".prediction-result").addClass("scale-in-center");
+                                setTimeout(() => {
+                                    $(".prediction-result").removeClass("scale-in-center");
+                                }, 700)
+                            }, 500);
+                        } else {
+                            alert('Could not process request');
+                        }
+                    },
+                    error: function (res) {
+                        if (res.status === 401) {
+                            window.location.href = '/Identity/Account/Login';
+                        }
+                    },
+                    complete: function () {
+                        $("body").removeClass("loading");
+                        $("form").trigger("reset");
+                    }
+                })
+            }
+        });
+    </script>
+
 }
 
 <form asp-action="Stroke" asp-controller="Prediction">
@@ -44,16 +98,11 @@
         <span asp-validation-for="Cholesterol" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="FastingBloodSugar"></label>
-        <input asp-for="FastingBloodSugar" class="form-control" min="0" max="@int.MaxValue" />
-        <span asp-validation-for="FastingBloodSugar" class="text-danger"></span>
-    </div>
-    <div class="form-group">
         <label asp-for="MaxHeartRate"></label>
         <input asp-for="MaxHeartRate" class="form-control" min="0" max="@int.MaxValue" />
         <span asp-validation-for="MaxHeartRate" class="text-danger"></span>
     </div>
-    
+
     <div class="form-group">
         <label asp-for="OldPeakLevel"></label>
         <div class="row">
@@ -87,7 +136,19 @@
                 <label asp-for="ExerciseAngia"></label>
             </div>
         </div>
+        <div class="form-group">
+            <div class="checkbox">
+                <input asp-for="FastingBloodSugar" />
+                <label asp-for="FastingBloodSugar"></label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="checkbox">
+                <input asp-for="RestingECG" />
+                <label asp-for="RestingECG"></label>
+            </div>
+        </div>
     </div>
-    <button type="submit" class="btn-form">Submit</button>
+    <button id="submit-btn" type="submit" class="btn-form">Submit</button>
 </form>
 

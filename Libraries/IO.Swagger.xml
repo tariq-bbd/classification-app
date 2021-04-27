@@ -1178,7 +1178,7 @@
             Represents a collection of functions to interact with the API endpoints
             </summary>
         </member>
-        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictGet(IO.Swagger.Model.HeartFailurePredictionDTO)">
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictPost(IO.Swagger.Model.HeartFailurePredictionDTO)">
             <summary>
             Predict if a person is likely to have heart failure
             </summary>
@@ -1189,7 +1189,7 @@
             <param name="body"> (optional)</param>
             <returns>PredictionModel</returns>
         </member>
-        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictGetWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictPostWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
             <summary>
             Predict if a person is likely to have heart failure
             </summary>
@@ -1200,7 +1200,29 @@
             <param name="body"> (optional)</param>
             <returns>ApiResponse of PredictionModel</returns>
         </member>
-        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictGetAsync(IO.Swagger.Model.HeartFailurePredictionDTO)">
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailureRecordsHeartFailureNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailurePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailureRecordsHeartFailureNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailurePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictPostAsync(IO.Swagger.Model.HeartFailurePredictionDTO)">
             <summary>
             Predict if a person is likely to have heart failure
             </summary>
@@ -1211,7 +1233,7 @@
             <param name="body"> (optional)</param>
             <returns>Task of PredictionModel</returns>
         </member>
-        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictGetAsyncWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictPostAsyncWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
             <summary>
             Predict if a person is likely to have heart failure
             </summary>
@@ -1221,6 +1243,28 @@
             <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
             <param name="body"> (optional)</param>
             <returns>Task of ApiResponse (PredictionModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailureRecordsHeartFailureNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailurePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailureRecordsHeartFailureNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailurePredictionModel&gt;)</returns>
         </member>
         <member name="T:IO.Swagger.Api.HeartFailureApi">
             <summary>
@@ -1273,7 +1317,7 @@
             <param name="value">Header field value.</param>
             <returns></returns>
         </member>
-        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictGet(IO.Swagger.Model.HeartFailurePredictionDTO)">
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictPost(IO.Swagger.Model.HeartFailurePredictionDTO)">
             <summary>
             Predict if a person is likely to have heart failure 
             </summary>
@@ -1281,7 +1325,7 @@
             <param name="body"> (optional)</param>
             <returns>PredictionModel</returns>
         </member>
-        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictGetWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictPostWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
             <summary>
             Predict if a person is likely to have heart failure 
             </summary>
@@ -1289,7 +1333,7 @@
             <param name="body"> (optional)</param>
             <returns>ApiResponse of PredictionModel</returns>
         </member>
-        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictGetAsync(IO.Swagger.Model.HeartFailurePredictionDTO)">
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictPostAsync(IO.Swagger.Model.HeartFailurePredictionDTO)">
             <summary>
             Predict if a person is likely to have heart failure 
             </summary>
@@ -1297,13 +1341,45 @@
             <param name="body"> (optional)</param>
             <returns>Task of PredictionModel</returns>
         </member>
-        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictGetAsyncWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictPostAsyncWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
             <summary>
             Predict if a person is likely to have heart failure 
             </summary>
             <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
             <param name="body"> (optional)</param>
             <returns>Task of ApiResponse (PredictionModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailureRecordsHeartFailureNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailurePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailureRecordsHeartFailureNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailurePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailureRecordsHeartFailureNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailurePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailureRecordsHeartFailureNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailurePredictionModel&gt;)</returns>
         </member>
         <member name="P:IO.Swagger.Api.HeartFailureApi.Configuration">
             <summary>
@@ -1343,6 +1419,28 @@
             <param name="body"> (optional)</param>
             <returns>ApiResponse of PredictionModel</returns>
         </member>
+        <member name="M:IO.Swagger.Api.IStrokeApi.ApiDiseasesStrokeRecordsHeartFailureNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IStrokeApi.ApiDiseasesStrokeRecordsHeartFailureNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokePredictionModel&gt;</returns>
+        </member>
         <member name="M:IO.Swagger.Api.IStrokeApi.ApiDiseasesStrokePredictPostAsync(IO.Swagger.Model.StrokePredictionDTO)">
             <summary>
             Predict if a person is likely to have a stroke
@@ -1364,6 +1462,28 @@
             <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
             <param name="body"> (optional)</param>
             <returns>Task of ApiResponse (PredictionModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IStrokeApi.ApiDiseasesStrokeRecordsHeartFailureNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IStrokeApi.ApiDiseasesStrokeRecordsHeartFailureNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokePredictionModel&gt;)</returns>
         </member>
         <member name="T:IO.Swagger.Api.StrokeApi">
             <summary>
@@ -1447,6 +1567,38 @@
             <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
             <param name="body"> (optional)</param>
             <returns>Task of ApiResponse (PredictionModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.ApiDiseasesStrokeRecordsHeartFailureNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.ApiDiseasesStrokeRecordsHeartFailureNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.ApiDiseasesStrokeRecordsHeartFailureNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokePredictionModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.ApiDiseasesStrokeRecordsHeartFailureNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart Failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokePredictionModel&gt;)</returns>
         </member>
         <member name="P:IO.Swagger.Api.StrokeApi.Configuration">
             <summary>
@@ -2486,6 +2638,133 @@
             Gets or Sets Target
             </summary>
         </member>
+        <member name="T:IO.Swagger.Model.HeartFailurePredictionModel">
+            <summary>
+            HeartFailurePredictionModel
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionModel.#ctor(System.Nullable{System.Int32},System.Nullable{System.Single},System.String,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single},System.String,System.String,System.Nullable{System.Single},System.String,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.HeartFailurePredictionModel"/> class.
+            </summary>
+            <param name="id">id (required).</param>
+            <param name="age">age (required).</param>
+            <param name="sex">sex (required).</param>
+            <param name="chestPainType">chestPainType (required).</param>
+            <param name="restingBpS">restingBpS (required).</param>
+            <param name="cholesterol">cholesterol (required).</param>
+            <param name="fastingBloodSugar">fastingBloodSugar (required).</param>
+            <param name="restingEcg">restingEcg (required).</param>
+            <param name="maxHeartRate">maxHeartRate (required).</param>
+            <param name="exerciseAngina">exerciseAngina (required).</param>
+            <param name="oldpeak">oldpeak (required).</param>
+            <param name="sTSlope">sTSlope (required).</param>
+            <param name="heartFailurePredictionResult">heartFailurePredictionResult (required).</param>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionModel.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionModel.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionModel.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionModel.Equals(IO.Swagger.Model.HeartFailurePredictionModel)">
+            <summary>
+            Returns true if HeartFailurePredictionModel instances are equal
+            </summary>
+            <param name="input">Instance of HeartFailurePredictionModel to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionModel.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionModel.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.Age">
+            <summary>
+            Gets or Sets Age
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.Sex">
+            <summary>
+            Gets or Sets Sex
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.ChestPainType">
+            <summary>
+            Gets or Sets ChestPainType
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.RestingBpS">
+            <summary>
+            Gets or Sets RestingBpS
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.Cholesterol">
+            <summary>
+            Gets or Sets Cholesterol
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.FastingBloodSugar">
+            <summary>
+            Gets or Sets FastingBloodSugar
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.RestingEcg">
+            <summary>
+            Gets or Sets RestingEcg
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.MaxHeartRate">
+            <summary>
+            Gets or Sets MaxHeartRate
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.ExerciseAngina">
+            <summary>
+            Gets or Sets ExerciseAngina
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.Oldpeak">
+            <summary>
+            Gets or Sets Oldpeak
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.STSlope">
+            <summary>
+            Gets or Sets STSlope
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionModel.HeartFailurePredictionResult">
+            <summary>
+            Gets or Sets HeartFailurePredictionResult
+            </summary>
+        </member>
         <member name="T:IO.Swagger.Model.HeartFailureReturnModel">
             <summary>
             HeartFailureReturnModel
@@ -2570,7 +2849,7 @@
             PredictionModel
             </summary>
         </member>
-        <member name="M:IO.Swagger.Model.PredictionModel.#ctor(System.Nullable{System.Single})">
+        <member name="M:IO.Swagger.Model.PredictionModel.#ctor(System.Nullable{System.Int32})">
             <summary>
             Initializes a new instance of the <see cref="T:IO.Swagger.Model.PredictionModel"/> class.
             </summary>
@@ -2625,7 +2904,7 @@
             StrokeDataModel
             </summary>
         </member>
-        <member name="M:IO.Swagger.Model.StrokeDataModel.#ctor(System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.Nullable{System.Boolean})">
+        <member name="M:IO.Swagger.Model.StrokeDataModel.#ctor(System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.Nullable{System.Boolean})">
             <summary>
             Initializes a new instance of the <see cref="T:IO.Swagger.Model.StrokeDataModel"/> class.
             </summary>
@@ -2746,7 +3025,7 @@
             StrokePredictionDTO
             </summary>
         </member>
-        <member name="M:IO.Swagger.Model.StrokePredictionDTO.#ctor(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String)">
+        <member name="M:IO.Swagger.Model.StrokePredictionDTO.#ctor(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:IO.Swagger.Model.StrokePredictionDTO"/> class.
             </summary>
@@ -2848,6 +3127,127 @@
         <member name="P:IO.Swagger.Model.StrokePredictionDTO.SmokingStatus">
             <summary>
             Gets or Sets SmokingStatus
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Model.StrokePredictionModel">
+            <summary>
+            StrokePredictionModel
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionModel.#ctor(System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.Nullable{System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.StrokePredictionModel"/> class.
+            </summary>
+            <param name="id">id (required).</param>
+            <param name="gender">gender (required).</param>
+            <param name="age">age (required).</param>
+            <param name="hasHypertension">hasHypertension (required).</param>
+            <param name="hasHeartDisease">hasHeartDisease (required).</param>
+            <param name="everMarried">everMarried (required).</param>
+            <param name="workType">workType (required).</param>
+            <param name="residenceType">residenceType (required).</param>
+            <param name="averageGlucoseLevel">averageGlucoseLevel (required).</param>
+            <param name="bmi">bmi (required).</param>
+            <param name="smokingStatus">smokingStatus (required).</param>
+            <param name="strokePredictionResult">strokePredictionResult (required).</param>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionModel.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionModel.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionModel.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionModel.Equals(IO.Swagger.Model.StrokePredictionModel)">
+            <summary>
+            Returns true if StrokePredictionModel instances are equal
+            </summary>
+            <param name="input">Instance of StrokePredictionModel to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionModel.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionModel.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.Gender">
+            <summary>
+            Gets or Sets Gender
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.Age">
+            <summary>
+            Gets or Sets Age
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.HasHypertension">
+            <summary>
+            Gets or Sets HasHypertension
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.HasHeartDisease">
+            <summary>
+            Gets or Sets HasHeartDisease
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.EverMarried">
+            <summary>
+            Gets or Sets EverMarried
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.WorkType">
+            <summary>
+            Gets or Sets WorkType
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.ResidenceType">
+            <summary>
+            Gets or Sets ResidenceType
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.AverageGlucoseLevel">
+            <summary>
+            Gets or Sets AverageGlucoseLevel
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.Bmi">
+            <summary>
+            Gets or Sets Bmi
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.SmokingStatus">
+            <summary>
+            Gets or Sets SmokingStatus
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionModel.StrokePredictionResult">
+            <summary>
+            Gets or Sets StrokePredictionResult
             </summary>
         </member>
         <member name="T:IO.Swagger.Model.StrokeReturnModel">

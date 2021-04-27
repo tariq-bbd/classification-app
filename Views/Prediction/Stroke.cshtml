@@ -8,7 +8,7 @@
     ViewData["Header"] = "Stroke Prediction";
 
     int maxAge = 150;
-    int maxGlucoseLevel = 150;
+    int maxGlucoseLevel = int.MaxValue;
     double maxBMI = 45;
 }
 
@@ -19,42 +19,41 @@
             e.preventDefault();
             $("form").validate();
             if ($("form").valid()) {
+                var t = $("input[name='__RequestVerificationToken']").val();
                 $("body").addClass("loading");
                 $.ajax({
                     url: "@Url.Action("Stroke")",
+                    headers:
+                    {
+                        "RequestVerificationToken": t
+                    },
                     method: "POST",
                     data: $("form").serialize(),
                     contentType: 'application/x-www-form-urlencoded; charset=utf-8',
                     dataType: "json",
                     success: function (res) {
+                        res = JSON.parse(res);
                         if (res.hasOwnProperty('predictionResult')) {
                             $("form").addClass("scale-out-center");
                             $(".prediction-result-header").text('Probability of Stroke:\n\n');
-                            $(".prediction-result-text").text(res.predictionResult);
+                            $(".prediction-result-text").text(res.predictionResult + '%');
                             setTimeout(() => {
                                 $("form").css("display", "none");
                                 $("form").removeClass("scale-out-center");
                                 $("body").addClass("show-prediction-result");
+                                $(".prediction-result").css("display", "flex");
                                 $(".prediction-result").addClass("scale-in-center");
                                 setTimeout(() => {
                                     $(".prediction-result").removeClass("scale-in-center");
                                 }, 700)
                             }, 500);
                         } else {
-
-                            //temp until working without proxy error
-                            $("form").addClass("scale-out-center");
-                            $(".prediction-result-header").text('Probability of Stroke:\n\n');
-                            $(".prediction-result-text").text("73.50%");
-                            setTimeout(() => {
-                                $("form").css("display", "none");
-                                $("form").removeClass("scale-out-center");
-                                $("body").addClass("show-prediction-result");
-                                $(".prediction-result").addClass("scale-in-center");
-                                setTimeout(() => {
-                                    $(".prediction-result").removeClass("scale-in-center");
-                                }, 700)
-                            }, 500);
+                            alert('Could not process request');
+                        }
+                    },
+                    error: function (res) {
+                        if (res.status === 401) {
+                            window.location.href = '/Identity/Account/Login';
                         }
                     },
                     complete: function () {

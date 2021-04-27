@@ -4,6 +4,7 @@ using ClassificationApp.Models.Services;
 using System.Threading.Tasks;
 using System.Net;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ClassificationApp.Controllers
 {
@@ -17,16 +18,20 @@ namespace ClassificationApp.Controllers
             _diagnoseMeService = diagnoseMeService;
         }
 
+        [Authorize]
         public IActionResult Stroke()
         {
             return View();
         }
+
+        [Authorize]
         public IActionResult HeartAttack()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<JsonResult> Stroke(StrokePredictionModel model)
         {
@@ -35,6 +40,18 @@ namespace ClassificationApp.Controllers
                 return Json(new { error = "Invalid form data" });
             }
             return Json(await _diagnoseMeService.GetStrokePredictionResult(model));
+        }
+
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<JsonResult> HeartAttack(HeartAttackPredictionModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return Json(new { error = "Invalid form data" });
+            }
+            return Json(await _diagnoseMeService.GetHeartFailurePredictionResult(model));
         }
     }
 }
