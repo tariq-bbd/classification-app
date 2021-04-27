@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Net;
 using System;
 using Microsoft.AspNetCore.Authorization;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace ClassificationApp.Controllers
 {
@@ -37,7 +39,7 @@ namespace ClassificationApp.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return Json(new { error = "Invalid form data" });
+                return Json(JsonConvert.SerializeObject(new { error = "Invalid form data" }));
             }
             return Json(await _diagnoseMeService.GetStrokePredictionResult(model));
         }
@@ -49,7 +51,8 @@ namespace ClassificationApp.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return Json(new { error = "Invalid form data" });
+                return Json(JsonConvert.SerializeObject(new { error = "Invalid form data" }));
+
             }
             return Json(await _diagnoseMeService.GetHeartFailurePredictionResult(model));
         }

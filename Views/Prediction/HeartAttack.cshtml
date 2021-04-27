@@ -14,14 +14,12 @@
 
 @section formScripts {
     @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
-
     <script>
         function updateSliderValue(val, sliderID) {
             document.getElementById(sliderID).textContent = val;
         }
-    </script>
 
-    <script>
+
         $("#submit-btn").on("click", function (e) {
             e.preventDefault();
             $("form").validate();
@@ -55,7 +53,7 @@
                                 }, 700)
                             }, 500);
                         } else {
-                            alert('Could not process request');
+                            alert(res.error);
                         }
                     },
                     error: function (res) {
@@ -66,6 +64,9 @@
                     complete: function () {
                         $("body").removeClass("loading");
                         $("form").trigger("reset");
+                        ['st-slope-slider', 'chest-pain-slider', 'old-peak-slider'].forEach((id) => {
+                            updateSliderValue(0, id);
+                        })
                     }
                 })
             }
@@ -77,29 +78,29 @@
 <form asp-action="Stroke" asp-controller="Prediction">
     <div class="form-group">
         <label asp-for="Sex"></label>
-        <select asp-for="Sex" class="form-control" asp-items="Html.GetEnumSelectList<Sex>()">
+        <select required asp-for="Sex" class="form-control" asp-items="Html.GetEnumSelectList<Sex>()">
             <option selected="selected" value="">Please select...</option>
         </select>
         <span asp-validation-for="Sex" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Age"></label>
-        <input asp-for="Age" class="form-control" min="0" max="@MaxAge" />
+        <input required asp-for="Age" class="form-control" min="0" max="@MaxAge" />
         <span asp-validation-for="Age" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="RestingBPS"></label>
-        <input asp-for="RestingBPS" class="form-control" min="0" max="@int.MaxValue" />
+        <input required asp-for="RestingBPS" class="form-control" min="0" max="@int.MaxValue" />
         <span asp-validation-for="RestingBPS" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Cholesterol"></label>
-        <input asp-for="Cholesterol" class="form-control" min="0" max="@int.MaxValue" />
+        <input required asp-for="Cholesterol" class="form-control" min="0" max="@int.MaxValue" />
         <span asp-validation-for="Cholesterol" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="MaxHeartRate"></label>
-        <input asp-for="MaxHeartRate" class="form-control" min="0" max="@int.MaxValue" />
+        <input required asp-for="MaxHeartRate" class="form-control" min="0" max="@int.MaxValue" />
         <span asp-validation-for="MaxHeartRate" class="text-danger"></span>
     </div>
 
