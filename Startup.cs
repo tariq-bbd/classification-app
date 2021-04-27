@@ -7,7 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Globalization;
 using Microsoft.Data.SqlClient;
-using Microsoft.AspNetCore.Identity;
+using ClassificationApp.Models.Services;
+using Newtonsoft.Json;
 
 namespace ClassificationApp
 {
@@ -45,6 +46,7 @@ namespace ClassificationApp
                 }
             ).AddCookie();
 
+            services.AddHttpClient<IDiagnoseMeClient, DiagnoseMeClient>();
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddHttpClient();

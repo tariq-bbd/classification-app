@@ -40,7 +40,7 @@ namespace ClassificationApp.Models.Diseases
 
         [Required]
         [Display(Name = "Average Glucose Level")]
-        [Range(0, 250)]
+        [Range(0, int.MaxValue)]
         public double AverageGlucoseLevel { get; set; }
 
         [Required]

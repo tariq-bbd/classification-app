@@ -34,8 +34,7 @@ namespace ClassificationApp.Models.Diseases
 
         [Required]
         [Display(Name = "Fasting Blood Sugar Level")]
-        [Range(0, int.MaxValue)]
-        public int FastingBloodSugar { get; set; }
+        public bool FastingBloodSugar { get; set; }
 
         [Required]
         [Display(Name = "Spiked Resting ECG")]
@@ -57,7 +56,7 @@ namespace ClassificationApp.Models.Diseases
 
         [Required]
         [Display(Name = "Severity Slope")]
-        [Range(0, 5)]
+        [Range(0, 3)]
         public int SeveritySlope { get; set; }
     }
 }
