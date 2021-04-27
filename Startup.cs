@@ -7,8 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Globalization;
 using Microsoft.Data.SqlClient;
-using Microsoft.AspNetCore.Identity;
 using ClassificationApp.Models.Services;
+using Newtonsoft.Json;
 
 namespace ClassificationApp
 {
@@ -48,7 +48,6 @@ namespace ClassificationApp
 
             services.AddHttpClient<IDiagnoseMeClient, DiagnoseMeClient>();
             services.AddControllersWithViews();
-            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

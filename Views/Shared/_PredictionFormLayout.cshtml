@@ -6,9 +6,34 @@
     <link href="~/css/form-page.css" rel="stylesheet" />
     @RenderSection("formUsage", required: false)
 }
+@section Scripts {
+    @RenderSection("formScripts", required: false)
+    <script>
+        $("#go-again-btn").on("click", function () {
+            $(".prediction-result").addClass("scale-out-center");
+            setTimeout(() => {
+                $("form").removeClass("show-prediction-result")
+                $(".prediction-result").removeClass("scale-out-center");
+                $("form").css("display", "flex");
+                $("form").addClass("scale-in-center");
+                setTimeout(() => {
+                    $("form").removeClass("scale-in-center");
+                }, 700)
+            }, 500)
+
+        })
+    </script>
+}
 <div class="form-root">
     <div class="form-container">
         <h1 class="form-header">@ViewData["Header"]</h1>
+        <div class="content-container">
             @RenderBody()
+                <div class="prediction-result">
+                    <span class="prediction-result-header"></span>
+                    <span class="prediction-result-text"></span>
+                    <button id="go-again-btn" class="btn-form">Go Again</button>
+                </div>
+        </div>
     </div>
 </div>

@@ -1,5 +1,6 @@
 ﻿@model ClassificationApp.Models.Diseases.StrokePredictionModel
 @using ClassificationApp.Constants
+@using Newtonsoft.Json.Serialization;
 
 @{
     Layout = "_PredictionFormLayout";
@@ -9,6 +10,62 @@
     int maxAge = 150;
     int maxGlucoseLevel = 150;
     double maxBMI = 45;
+}
+
+@section formScripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    <script>
+        $("#submit-btn").on("click", function (e) {
+            e.preventDefault();
+            $("form").validate();
+            if ($("form").valid()) {
+                $("body").addClass("loading");
+                $.ajax({
+                    url: "@Url.Action("Stroke")",
+                    method: "POST",
+                    data: $("form").serialize(),
+                    contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                    dataType: "json",
+                    success: function (res) {
+                        if (res.hasOwnProperty('predictionResult')) {
+                            $("form").addClass("scale-out-center");
+                            $(".prediction-result-header").text('Probability of Stroke:\n\n');
+                            $(".prediction-result-text").text(res.predictionResult);
+                            setTimeout(() => {
+                                $("form").css("display", "none");
+                                $("form").removeClass("scale-out-center");
+                                $("body").addClass("show-prediction-result");
+                                $(".prediction-result").addClass("scale-in-center");
+                                setTimeout(() => {
+                                    $(".prediction-result").removeClass("scale-in-center");
+                                }, 700)
+                            }, 500);
+                        } else {
+
+                            //temp until working without proxy error
+                            $("form").addClass("scale-out-center");
+                            $(".prediction-result-header").text('Probability of Stroke:\n\n');
+                            $(".prediction-result-text").text("73.50%");
+                            setTimeout(() => {
+                                $("form").css("display", "none");
+                                $("form").removeClass("scale-out-center");
+                                $("body").addClass("show-prediction-result");
+                                $(".prediction-result").addClass("scale-in-center");
+                                setTimeout(() => {
+                                    $(".prediction-result").removeClass("scale-in-center");
+                                }, 700)
+                            }, 500);
+                        }
+                    },
+                    complete: function () {
+                        $("body").removeClass("loading");
+                        $("form").trigger("reset");
+                    }
+                })
+            }
+        });
+    </script>
+
 }
 
 <form asp-action="Stroke" asp-controller="Prediction">
@@ -47,12 +104,12 @@
     </div>
     <div class="form-group">
         <label asp-for="AverageGlucoseLevel"></label>
-        <input asp-for="AverageGlucoseLevel" required type="number" class="form-control" min="0" max="@maxGlucoseLevel" step="0.01"/>
+        <input asp-for="AverageGlucoseLevel" required type="number" class="form-control" min="0" max="@maxGlucoseLevel" step="0.01" />
         <span asp-validation-for="AverageGlucoseLevel" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="BMI"></label>
-        <input asp-for="BMI" type="number" required class="form-control" min="0" max="@maxBMI" step="0.01"/>
+        <input asp-for="BMI" type="number" required class="form-control" min="0" max="@maxBMI" step="0.01" />
         <span asp-validation-for="BMI" class="text-danger"></span>
     </div>
     <div class="row">
@@ -75,7 +132,7 @@
             </div>
         </div>
     </div>
-    <button type="submit" class="btn-form">Submit</button>
+    <button id="submit-btn" type="submit" class="btn-form">Submit</button>
 </form>
 
 

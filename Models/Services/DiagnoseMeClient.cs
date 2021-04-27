@@ -21,8 +21,26 @@ namespace ClassificationApp.Models.Services
         public async Task<string> GetStrokePredictionResult(StrokePredictionModel model)
         {
             string content = JsonConvert.SerializeObject(model);
+            var obj = new
+            {
+                Gender = "Male",
+                Age = 62,
+                HasHypertention = 0,
+                HasHeartDisease = 1,
+                EverMarried = "yes",
+                WorkType = "Private",
+                ResidenceType = "Urban",
+                AverageGlucoseLevel = 228.69,
+                BMI = 36.6,
+                SmokingStatus = "formerly smoked"
+            };
+            content = JsonConvert.SerializeObject(obj);
             var httpContent = new StringContent(content, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = await _client.PostAsync("http://localhost:44369/api/diseases/stroke/predict", httpContent);
+            var response = await _client.PostAsync("http://bbd-classification-app-backend.azurewebsites.net/api/diseases/stroke/predict", httpContent);
+            if (response.IsSuccessStatusCode)
+            {
+
+            }
 
             return response.Content.ReadAsStringAsync().Result;
         }

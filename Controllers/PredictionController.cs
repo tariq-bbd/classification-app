@@ -3,6 +3,7 @@ using ClassificationApp.Models.Diseases;
 using ClassificationApp.Models.Services;
 using System.Threading.Tasks;
 using System.Net;
+using System;
 
 namespace ClassificationApp.Controllers
 {
@@ -25,15 +26,15 @@ namespace ClassificationApp.Controllers
             return View();
         }
 
-        [HttpPost, ValidateAntiForgeryToken]
-        public async Task<IActionResult> Stroke(StrokePredictionModel model)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<JsonResult> Stroke(StrokePredictionModel model)
         {
             if (!ModelState.IsValid)
             {
-                return View(model);
+                return Json(new { error = "Invalid form data" });
             }
-            string predictionResult = _diagnoseMeService.GetStrokePredictionResult(model).Result;
-            return Content(predictionResult);
+            return Json(await _diagnoseMeService.GetStrokePredictionResult(model));
         }
     }
 }
