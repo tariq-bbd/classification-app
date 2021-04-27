@@ -5,6 +5,11 @@
     ViewData["pieCHart"] = null;
     ViewData["barCHartData"] = 1;//Roep C# method en parse die data in die js
     var respnse = JsonConvert.SerializeObject(ViewBag.response);
+    var test1 = ViewBag.testgetHeartData;
+    var test2 = ViewBag.testgetStrokeData;
+    var test3 = ViewBag.testgetStrokeDataforBmi;
+    var test4 = ViewBag.testgetNumberofRecordsStroke;
+    var test5 = ViewBag.testgetNumberofRecordsheartFailure;
 
 
 
@@ -14,87 +19,67 @@
     <script src="~/js/Chart.bundle.min.js"></script>
     <script type="text/javascript">
 
+        function testData() {
+
+            console.log(@test1 + " "+ @test2 + " "+@test3 + " "+@test4 + " "+@test5 )
+        }
 
         document.addEventListener('DOMContentLoaded', (event) => {
+            testData()
             console.log(JSON.parse('@Html.Raw(respnse)'))
 
+            var barCHart = document.getElementById('barChart');
+
+
+            var bartestChart = new Chart(barCHart, {
+                type: 'polarArea',
+                data: {
+                    labels: ['totalCases', 'chestPain', 'cholestrol', 'excerciseEngina', 'heartFailure'],
+                    datasets: [{
+                        label: 'Github Stars',
+                        data: [135850, 52122, 148825, 16939, 9763],
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)',
+                            'rgb(255, 205, 160)',
+                            'rgb(255, 205, 86)',
+
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                responsive: true
+
+            })
+
+            var pieCHart = document.getElementById('pieChart');
+
+            var bartestChart = new Chart(pieCHart, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Red',
+                        'Blue',
+                        'Yellow'
+                    ],
+
+                    datasets: [{
+                        label: 'My First Dataset',
+                        data: [300, 50, 100],
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)'
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                responsive: true
+            })
 
         });
 
-        function getChartData() {
-            return fetch('https://v2.jokeapi.dev/joke/Any',
-                {
-                    method: 'get',
-                    headers: {
-                        'Content-Type': 'application/json;'
-                    }
-                })
-                .then(function (response) {
-                    if (response.ok) {
-
-                        var barCHart = document.getElementById('barChart');
-
-
-                        var bartestChart = new Chart(barCHart, {
-                            type: 'polarArea',
-                            data: {
-                                labels: ['totalCases', 'chestPain', 'cholestrol', 'excerciseEngina', 'heartFailure'],
-                                datasets: [{
-                                    label: 'Github Stars',
-                                    data: [135850, 52122, 148825, 16939, 9763,],
-                                    backgroundColor: [
-                                        'rgb(255, 99, 132)',
-                                        'rgb(54, 162, 235)',
-                                        'rgb(255, 205, 86)',
-                                        'rgb(255, 205, 160)',
-                                        'rgb(255, 205, 86)',
-                                        'rgb(255, 120, 86)',
-                                        'rgb(150, 205, 86)',
-                                        'rgb(255, 105, 186)'
-                                    ],
-                                    hoverOffset: 4
-                                }]
-                            },
-                            responsive: true
-
-                        })
-
-                        var pieCHart = document.getElementById('pieChart');
-
-                        var bartestChart = new Chart(pieCHart, {
-                            type: 'doughnut',
-                            data: {
-                                labels: [
-                                    'Red',
-                                    'Blue',
-                                    'Yellow'
-                                ],
-
-                                datasets: [{
-                                    label: 'My First Dataset',
-                                    data: [300, 50, 100],
-                                    backgroundColor: [
-                                        'rgb(255, 99, 132)',
-                                        'rgb(54, 162, 235)',
-                                        'rgb(255, 205, 86)'
-                                    ],
-                                    hoverOffset: 4
-                                }]
-                            },
-                            responsive: true
-                        })
-
-
-
-
-
-
-
-                    } else {
-                        throw Error('Response Not OK');
-                    }
-                })
-        }
     </script>
 
 }
