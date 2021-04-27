@@ -1,9 +1,35 @@
-﻿
+﻿@using Newtonsoft.Json
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["pieCHart"] = null;
     ViewData["barCHartData"] = 1;//Roep C# method en parse die data in die js
+    var  respnse = JsonConvert.SerializeObject(ViewBag.response);
+
+    var heartLabels = JsonConvert.SerializeObject(ViewBag.heartLabels);
+    var heartStats = JsonConvert.SerializeObject(ViewBag.heartStats);
+
+
+
+    var strokeData = JsonConvert.SerializeObject(ViewBag.strokeData);
+    var strokeLabels = JsonConvert.SerializeObject(ViewBag.strokeLabels);
+
+
+    var heartFailQty =ViewBag.heartFailQty;
+    var strokeQty = ViewBag.strokeQty;
+
+
+    var strokeMaleData = JsonConvert.SerializeObject(ViewBag.strokeMaleData);
+    var strokeMaleLabels = JsonConvert.SerializeObject(ViewBag.strokeMaleLabels);
+
+    var strokeFemaleData = JsonConvert.SerializeObject(ViewBag.strokemFemaleData);
+    var strokeFemaleLabels = JsonConvert.SerializeObject(ViewBag.strokeMaleLabels);
+
+    var heartMaleData = JsonConvert.SerializeObject(ViewBag.heartMaleStats);
+    var heartMaleLabels = JsonConvert.SerializeObject(ViewBag.heartMaleLabels);
+
+    var heartFemaleData = JsonConvert.SerializeObject(ViewBag.heartFemaleStats);
+    var heartFemaleLabels = JsonConvert.SerializeObject(ViewBag.heartFemaleLabels);
 
 
 
@@ -14,48 +40,45 @@
     <script type="text/javascript">
 
 
-        document.addEventListener('DOMContentLoaded', (event) => {
-        var barCHart = document.getElementById('barChart');
-            var stars = [135850, 52122, 148825, 16939, 9763,10000 , 9763, , 9763];
-            var frameworks = ['React', 'Angular', 'Vue', 'Hyperapp', 'Omi', 'j', 'h', 'b'];
 
-        var bartestChart = new Chart(barCHart, {
-            type: 'polarArea',
-            data: {
-                labels: ['React', 'Angular', 'Vue', 'Hyperapp', 'Omi', 'j', 'h', 'b'],
-                datasets: [{
-                    label: 'Github Stars',
-                    data: [135850, 52122, 148825, 16939, 9763, 10000, 9763,500 ],
-                    backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(54, 162, 235)',
-                        'rgb(255, 205, 86)',
-                        'rgb(255, 205, 160)',
-                        'rgb(255, 205, 86)',
-                        'rgb(255, 120, 86)',
-                        'rgb(150, 205, 86)',
-                        'rgb(255, 105, 186)'
-                    ],
-                    hoverOffset: 4
-                }]
-            },
-            responsive: true
-        })
+        document.addEventListener('DOMContentLoaded', (event) => {
+            //console.log(JSON.parse('@Html.Raw(heartFailQty)');
+
+
+            var barCHart = document.getElementById('barChart');
+            var bartestChart = new Chart(barCHart, {
+                type: 'polarArea',
+                data: {
+                    labels: JSON.parse('@Html.Raw(heartLabels)'),
+                    datasets: [{
+                        label: 'Github Stars',
+                        data: JSON.parse('@Html.Raw(heartStats)'),
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 154, 12)',
+                            'rgb(255, 205, 160)',
+                            'rgb(255, 205, 86)',
+
+                        ],
+                        hoverOffset: 4
+                    }]
+                },
+                responsive: true,
+
+
+            })
 
             var pieCHart = document.getElementById('pieChart');
 
             var bartestChart = new Chart(pieCHart, {
                 type: 'doughnut',
                 data: {
-                    labels: [
-                        'Red',
-                        'Blue',
-                        'Yellow'
-                    ],
-                   
+                    labels:JSON.parse('@Html.Raw(strokeLabels)'),
+
                     datasets: [{
                         label: 'My First Dataset',
-                        data: [300, 50, 100],
+                        data: JSON.parse('@Html.Raw(strokeData)'),
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
@@ -65,11 +88,71 @@
                     }]
                 },
                 responsive: true
+
+            })
+            //************************************
+            var radarHeartChart = document.getElementById('radarHeartChart');
+
+            var radartestChart = new Chart(radarHeartChart, {
+                type: 'radar',
+                data: {
+                    labels:JSON.parse('@Html.Raw(strokeMaleLabels)'),
+
+                    datasets: [{
+                        label: 'Male',
+                        data: JSON.parse('@Html.Raw(strokeMaleData)'),
+                        borderColor: 'rgb(0, 187, 249)',
+                        backgroundColor: 'rgba(0, 187, 249, 0.3)',
+
+                    },
+                    {
+                        label: 'Female',
+                        data: JSON.parse('@Html.Raw(strokeFemaleData)'),
+                        borderColor: 'rgb(254, 228, 64)',
+                        backgroundColor: 'rgba(254, 228, 64, 0.3)',
+
+                    }
+
+
+                    ]
+                },
+                responsive: true,
+
+
             })
 
-            
+            var radarStrokeChart = document.getElementById('radarStrokeChart');
 
-    });
+            var radartestcChart = new Chart(radarStrokeChart, {
+                type: 'radar',
+                data: {
+                    labels:JSON.parse('@Html.Raw(heartMaleLabels)'),
+
+                    datasets: [{
+                        label: 'Female',
+                        data: JSON.parse('@Html.Raw(heartMaleData)'),
+                        borderColor: 'rgb(155, 93, 229)',
+                        backgroundColor: 'rgba(155, 93, 229, 0.3)',
+
+                    },
+                    {
+                        label: 'Female',
+                        data: JSON.parse('@Html.Raw(heartFemaleData)'),
+                        borderColor: 'rgb(241, 91, 181)',
+                        backgroundColor: 'rgba(241, 91, 181, 0.3)',
+
+                    }
+
+
+                    ]
+                },
+                responsive: true,
+
+
+            })
+
+        });
+
     </script>
 
 }
@@ -85,35 +168,13 @@
 
 </head>
 <body>
+
     <div class="container-fluid">
         <div class="row ">
             <!-- Sidear -->
 
             
             <main class="col-md-12 ml-sm-auto col-lg-12  padding-top">
-                <h3>Patients</h3>
-                <hr>
-                <div class="table-responsive">
-                    <table class="table table-light table-striped ">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Position</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>Project Manager</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="card">
@@ -126,6 +187,122 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <canvas id="radarHeartChart" width="600" height="800"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <canvas id="radarStrokeChart" width="600" height="800"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3>Heart Failure Latest Patients</h3>
+                <hr>
+                <div class="table-responsive">
+                    <table class="table table-light table-striped ">
+                        <thead>
+                            <tr>
+                                <th scope="col">Row Number</th>
+                                <th scope="col">Id</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Sex</th>
+                                <th scope="col">ChestPainType</th>
+                                <th scope="col">StSlope</th>
+                                <th scope="col">RestingBpS</th>
+                                <th scope="col">Cholesterol</th>
+                                <th scope="col">FastingBloodSugar</th>
+                                <th scope="col">RestingEcg</th>
+                                <th scope="col">MaxHeartRate</th>
+                                <th scope="col">ExerciseAngina</th>
+                                <th scope="col">OldPeak</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @for (var i = 0; i < heartFailQty.Length; i++)
+                            {
+                                <tr>
+                                    <th scope="row">@i</th>
+                                    <td>@heartFailQty[@i].Id</td>
+                                    <td>@heartFailQty[@i].Age</td>
+                                    <td>@heartFailQty[@i].Sex</td>
+                                    <td>@heartFailQty[@i].ChestPainType</td>
+                                    <td>@heartFailQty[@i].StSlope</td>
+                                    <td>@heartFailQty[@i].RestingBpS</td>
+                                    <td>@heartFailQty[@i].Cholesterol</td>
+                                    <td>@heartFailQty[@i].FastingBloodSugar</td>
+                                    <td>@heartFailQty[@i].RestingEcg</td>
+                                    <td>@heartFailQty[@i].MaxHeartRate</td>
+                                    <td>@heartFailQty[@i].ExerciseAngina</td>
+                                    <td>@heartFailQty[@i].OldPeak</td>
+
+                                </tr>
+                            }
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <hr />
+                <h3>Heart Failure Latest Patients</h3>
+                <hr>
+                <div class="table-responsive">
+                    <table class="table table-light table-striped ">
+                        <thead>
+                            <tr>
+                                <th scope="col">Row Number</th>
+                                <th scope="col">Id</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Has Hypertension</th>
+                                <th scope="col">Has heart Disease</th>
+                                <th scope="col">Ever Married</th>
+                                <th scope="col">Work Type</th>
+                                <th scope="col">Residence Type</th>
+                                <th scope="col">Average Glucose Level</th>
+                                <th scope="col">Body Mass Index</th>
+                                <th scope="col">Smoking Status</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @for (var i = 0; i < strokeQty.Length; i++)
+                            {
+                                <tr>
+                                    <th scope="row">@i</th>
+                                    <td>@strokeQty[@i].Id</td>
+                                    <td>@strokeQty[@i].Gender</td>
+                                    <td>@strokeQty[@i].Age</td>
+                                    <td>@strokeQty[@i].HasHypertension</td>
+                                    <td>@strokeQty[@i].HasHeartDisease</td>
+                                    <td>@strokeQty[@i].EverMarried</td>
+                                    <td>@strokeQty[@i].WorkType</td>
+                                    <td>@strokeQty[@i].ResidenceType</td>
+                                    <td>@strokeQty[@i].AverageGlucoseLevel</td>
+                                    <td>@strokeQty[@i].Bmi</td>
+                                    <td>@strokeQty[@i].SmokingStatus</td>
+
+
+
+                                </tr>
+                            }
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
 
 
             </main>
@@ -157,72 +334,4 @@
 </body>
 </html>
 
-@*<script>
-        /////////
-        var myAmounts = [];
-        var myCategories = [];
-        var myInvoices;
 
-        function showChart() {
-            myAmounts = myInvoices.AmountList;
-            myCategories = myInvoices.CategoryList;
-            console.log(myAmounts);
-            console.log(myCategories);
-            let popCanvasName = document.getElementById("invChart");
-            let barChartName = new Chart(popCanvasName, {
-                type: 'bar',
-                data: {
-                    labels: myCategories,
-                    datasets: [{
-                        label: 'Invoice data',
-                        data: myAmounts,
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.6)',
-                            'rgba(54, 162, 235, 0.6)',
-                            'rgba(255, 206, 86, 0.6)',
-                            'rgba(75, 192, 192, 0.6)',
-                            'rgba(153, 102, 255, 0.6)',
-                        ]
-                    }]
-                },
-                options: {
-                    responsive: false,
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
-                }
-            });
-        }
-        function getChartData() {
-            return fetch('./Index?handler=InvoiceChartData',
-                {
-                    method: 'get',
-                    headers: {
-                        'Content-Type': 'application/json;charset=UTF-8'
-                    }
-                })
-                .then(function (response) {
-                    if (response.ok) {
-                        return response.text();
-                    } else {
-                        throw Error('Response Not OK');
-                    }
-                })
-                .then(function (text) {
-                    try {
-                        return JSON.parse(text);
-                    } catch (err) {
-                        throw Error('Method Not Found');
-                    }
-                })
-                .then(function (responseJSON) {
-                    myInvoices = responseJSON;
-                    showChart();
-                })
-        }
-        getChartData();
-    </script>*@

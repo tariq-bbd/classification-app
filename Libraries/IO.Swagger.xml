@@ -1,0 +1,3103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IO.Swagger</name>
+    </assembly>
+    <members>
+        <member name="T:IO.Swagger.Api.IDataApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Client.IApiAccessor">
+            <summary>
+            Represents configuration aspects required to interact with the API endpoints.
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.IApiAccessor.GetBasePath">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IApiAccessor.Configuration">
+            <summary>
+            Gets or sets the configuration object
+            </summary>
+            <value>An instance of the Configuration</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IApiAccessor.ExceptionFactory">
+            <summary>
+            Provides a factory method hook for the creation of exceptions.
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataAddPost(IO.Swagger.Model.HeartFailureDataModel)">
+            <summary>
+            Adds Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataAddPostWithHttpInfo(IO.Swagger.Model.HeartFailureDataModel)">
+            <summary>
+            Adds Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>ApiResponse of HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataAllGet">
+            <summary>
+            Gets Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataAllGetWithHttpInfo">
+            <summary>
+            Gets Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>ApiResponse of HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureChestPainLCholestrolLGet(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureChestPainLCholestrolLGetWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>ApiResponse of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGet(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>ApiResponse of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGet(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>ApiResponse of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeMaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeBmiGet(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeBmiGetWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>ApiResponse of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeFemaleBmiGet(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeFemaleBmiGetWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>ApiResponse of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeMaleBmiGet(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeMaleBmiGetWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>ApiResponse of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataAddPostAsync(IO.Swagger.Model.HeartFailureDataModel)">
+            <summary>
+            Adds Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataAddPostAsyncWithHttpInfo(IO.Swagger.Model.HeartFailureDataModel)">
+            <summary>
+            Adds Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of ApiResponse (HeartFailureDataModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataAllGetAsync">
+            <summary>
+            Gets Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataAllGetAsyncWithHttpInfo">
+            <summary>
+            Gets Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of ApiResponse (HeartFailureDataModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureChestPainLCholestrolLGetAsync(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureChestPainLCholestrolLGetAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetAsync(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetAsync(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokeDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokeDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokeDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeBmiGetAsync(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of ApiResponse (StrokeReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeFemaleBmiGetAsync(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeFemaleBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of ApiResponse (StrokeReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeMaleBmiGetAsync(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeMaleBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of ApiResponse (StrokeReturnModel)</returns>
+        </member>
+        <member name="T:IO.Swagger.Api.DataApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.DataApi"/> class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.DataApi"/> class
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.#ctor(IO.Swagger.Client.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.DataApi"/> class
+            using Configuration object
+            </summary>
+            <param name="configuration">An instance of Configuration</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.GetBasePath">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.SetBasePath(System.String)">
+            <summary>
+            Sets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.DefaultHeader">
+            <summary>
+            Gets the default header.
+            </summary>
+            <returns>Dictionary of HTTP header</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.AddDefaultHeader(System.String,System.String)">
+            <summary>
+            Add default header.
+            </summary>
+            <param name="key">Header field name.</param>
+            <param name="value">Header field value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataAddPost(IO.Swagger.Model.HeartFailureDataModel)">
+            <summary>
+            Adds Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataAddPostWithHttpInfo(IO.Swagger.Model.HeartFailureDataModel)">
+            <summary>
+            Adds Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>ApiResponse of HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataAddPostAsync(IO.Swagger.Model.HeartFailureDataModel)">
+            <summary>
+            Adds Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataAddPostAsyncWithHttpInfo(IO.Swagger.Model.HeartFailureDataModel)">
+            <summary>
+            Adds Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of ApiResponse (HeartFailureDataModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataAllGet">
+            <summary>
+            Gets Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataAllGetWithHttpInfo">
+            <summary>
+            Gets Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>ApiResponse of HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataAllGetAsync">
+            <summary>
+            Gets Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of HeartFailureDataModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataAllGetAsyncWithHttpInfo">
+            <summary>
+            Gets Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <returns>Task of ApiResponse (HeartFailureDataModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureChestPainLCholestrolLGet(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureChestPainLCholestrolLGetWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>ApiResponse of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureChestPainLCholestrolLGetAsync(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureChestPainLCholestrolLGetAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGet(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>ApiResponse of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetAsync(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGet(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>ApiResponse of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetAsync(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokeDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeMaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokeDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokeDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeBmiGet(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeBmiGetWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>ApiResponse of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeBmiGetAsync(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of ApiResponse (StrokeReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeFemaleBmiGet(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeFemaleBmiGetWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>ApiResponse of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeFemaleBmiGetAsync(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeFemaleBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of ApiResponse (StrokeReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeMaleBmiGet(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeMaleBmiGetWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>ApiResponse of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeMaleBmiGetAsync(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeMaleBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of ApiResponse (StrokeReturnModel)</returns>
+        </member>
+        <member name="P:IO.Swagger.Api.DataApi.Configuration">
+            <summary>
+            Gets or sets the configuration object
+            </summary>
+            <value>An instance of the Configuration</value>
+        </member>
+        <member name="P:IO.Swagger.Api.DataApi.ExceptionFactory">
+            <summary>
+            Provides a factory method hook for the creation of exceptions.
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Api.IHeartFailureApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictGet(IO.Swagger.Model.HeartFailurePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictGetWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>ApiResponse of PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictGetAsync(IO.Swagger.Model.HeartFailurePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IHeartFailureApi.ApiDiseasesHeartFailurePredictGetAsyncWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have heart failure
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of ApiResponse (PredictionModel)</returns>
+        </member>
+        <member name="T:IO.Swagger.Api.HeartFailureApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.HeartFailureApi"/> class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.HeartFailureApi"/> class
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.#ctor(IO.Swagger.Client.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.HeartFailureApi"/> class
+            using Configuration object
+            </summary>
+            <param name="configuration">An instance of Configuration</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.GetBasePath">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.SetBasePath(System.String)">
+            <summary>
+            Sets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.DefaultHeader">
+            <summary>
+            Gets the default header.
+            </summary>
+            <returns>Dictionary of HTTP header</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.AddDefaultHeader(System.String,System.String)">
+            <summary>
+            Add default header.
+            </summary>
+            <param name="key">Header field name.</param>
+            <param name="value">Header field value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictGet(IO.Swagger.Model.HeartFailurePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictGetWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>ApiResponse of PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictGetAsync(IO.Swagger.Model.HeartFailurePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.HeartFailureApi.ApiDiseasesHeartFailurePredictGetAsyncWithHttpInfo(IO.Swagger.Model.HeartFailurePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have heart failure 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of ApiResponse (PredictionModel)</returns>
+        </member>
+        <member name="P:IO.Swagger.Api.HeartFailureApi.Configuration">
+            <summary>
+            Gets or sets the configuration object
+            </summary>
+            <value>An instance of the Configuration</value>
+        </member>
+        <member name="P:IO.Swagger.Api.HeartFailureApi.ExceptionFactory">
+            <summary>
+            Provides a factory method hook for the creation of exceptions.
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Api.IStrokeApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Api.IStrokeApi.ApiDiseasesStrokePredictPost(IO.Swagger.Model.StrokePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have a stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IStrokeApi.ApiDiseasesStrokePredictPostWithHttpInfo(IO.Swagger.Model.StrokePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have a stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>ApiResponse of PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IStrokeApi.ApiDiseasesStrokePredictPostAsync(IO.Swagger.Model.StrokePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have a stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IStrokeApi.ApiDiseasesStrokePredictPostAsyncWithHttpInfo(IO.Swagger.Model.StrokePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have a stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of ApiResponse (PredictionModel)</returns>
+        </member>
+        <member name="T:IO.Swagger.Api.StrokeApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.StrokeApi"/> class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.StrokeApi"/> class
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.#ctor(IO.Swagger.Client.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.StrokeApi"/> class
+            using Configuration object
+            </summary>
+            <param name="configuration">An instance of Configuration</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.GetBasePath">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.SetBasePath(System.String)">
+            <summary>
+            Sets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.DefaultHeader">
+            <summary>
+            Gets the default header.
+            </summary>
+            <returns>Dictionary of HTTP header</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.AddDefaultHeader(System.String,System.String)">
+            <summary>
+            Add default header.
+            </summary>
+            <param name="key">Header field name.</param>
+            <param name="value">Header field value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.ApiDiseasesStrokePredictPost(IO.Swagger.Model.StrokePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have a stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.ApiDiseasesStrokePredictPostWithHttpInfo(IO.Swagger.Model.StrokePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have a stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>ApiResponse of PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.ApiDiseasesStrokePredictPostAsync(IO.Swagger.Model.StrokePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have a stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of PredictionModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.StrokeApi.ApiDiseasesStrokePredictPostAsyncWithHttpInfo(IO.Swagger.Model.StrokePredictionDTO)">
+            <summary>
+            Predict if a person is likely to have a stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of ApiResponse (PredictionModel)</returns>
+        </member>
+        <member name="P:IO.Swagger.Api.StrokeApi.Configuration">
+            <summary>
+            Gets or sets the configuration object
+            </summary>
+            <value>An instance of the Configuration</value>
+        </member>
+        <member name="P:IO.Swagger.Api.StrokeApi.ExceptionFactory">
+            <summary>
+            Provides a factory method hook for the creation of exceptions.
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Api.IUserApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Api.IUserApi.ApiUsersIdGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets a User by ID
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="id"></param>
+            <returns>UserModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IUserApi.ApiUsersIdGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets a User by ID
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="id"></param>
+            <returns>ApiResponse of UserModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IUserApi.ApiUsersPost(IO.Swagger.Model.UserDTO)">
+            <summary>
+            
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IUserApi.ApiUsersPostWithHttpInfo(IO.Swagger.Model.UserDTO)">
+            <summary>
+            
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>ApiResponse of Object(void)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IUserApi.ApiUsersIdGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets a User by ID
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="id"></param>
+            <returns>Task of UserModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IUserApi.ApiUsersIdGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets a User by ID
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="id"></param>
+            <returns>Task of ApiResponse (UserModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IUserApi.ApiUsersPostAsync(IO.Swagger.Model.UserDTO)">
+            <summary>
+            
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of void</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IUserApi.ApiUsersPostAsyncWithHttpInfo(IO.Swagger.Model.UserDTO)">
+            <summary>
+            
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of ApiResponse</returns>
+        </member>
+        <member name="T:IO.Swagger.Api.UserApi">
+            <summary>
+            Represents a collection of functions to interact with the API endpoints
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.UserApi"/> class.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.UserApi"/> class
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.#ctor(IO.Swagger.Client.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Api.UserApi"/> class
+            using Configuration object
+            </summary>
+            <param name="configuration">An instance of Configuration</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.GetBasePath">
+            <summary>
+            Gets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.SetBasePath(System.String)">
+            <summary>
+            Sets the base path of the API client.
+            </summary>
+            <value>The base path</value>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.DefaultHeader">
+            <summary>
+            Gets the default header.
+            </summary>
+            <returns>Dictionary of HTTP header</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.AddDefaultHeader(System.String,System.String)">
+            <summary>
+            Add default header.
+            </summary>
+            <param name="key">Header field name.</param>
+            <param name="value">Header field value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.ApiUsersIdGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets a User by ID 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="id"></param>
+            <returns>UserModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.ApiUsersIdGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets a User by ID 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="id"></param>
+            <returns>ApiResponse of UserModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.ApiUsersIdGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets a User by ID 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="id"></param>
+            <returns>Task of UserModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.ApiUsersIdGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets a User by ID 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="id"></param>
+            <returns>Task of ApiResponse (UserModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.ApiUsersPost(IO.Swagger.Model.UserDTO)">
+            <summary>
+             
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.ApiUsersPostWithHttpInfo(IO.Swagger.Model.UserDTO)">
+            <summary>
+             
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>ApiResponse of Object(void)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.ApiUsersPostAsync(IO.Swagger.Model.UserDTO)">
+            <summary>
+             
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of void</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.UserApi.ApiUsersPostAsyncWithHttpInfo(IO.Swagger.Model.UserDTO)">
+            <summary>
+             
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="body"> (optional)</param>
+            <returns>Task of ApiResponse</returns>
+        </member>
+        <member name="P:IO.Swagger.Api.UserApi.Configuration">
+            <summary>
+            Gets or sets the configuration object
+            </summary>
+            <value>An instance of the Configuration</value>
+        </member>
+        <member name="P:IO.Swagger.Api.UserApi.ExceptionFactory">
+            <summary>
+            Provides a factory method hook for the creation of exceptions.
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Client.ApiClient">
+            <summary>
+            API client is mainly responsible for making the HTTP call to the API backend.
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.ApiClient"/> class
+            with default configuration.
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.#ctor(IO.Swagger.Client.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.ApiClient"/> class
+            with default base path (/).
+            </summary>
+            <param name="config">An instance of Configuration.</param>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.ApiClient"/> class
+            with default configuration.
+            </summary>
+            <param name="basePath">The base path.</param>
+        </member>
+        <member name="F:IO.Swagger.Client.ApiClient.Default">
+            <summary>
+            Gets or sets the default API client for making HTTP calls.
+            </summary>
+            <value>The default API client.</value>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.CallApi(System.String,RestSharp.Method,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Object,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,RestSharp.FileParameter},System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            Makes the HTTP request (Sync).
+            </summary>
+            <param name="path">URL path.</param>
+            <param name="method">HTTP method.</param>
+            <param name="queryParams">Query parameters.</param>
+            <param name="postBody">HTTP body (POST request).</param>
+            <param name="headerParams">Header parameters.</param>
+            <param name="formParams">Form parameters.</param>
+            <param name="fileParams">File parameters.</param>
+            <param name="pathParams">Path parameters.</param>
+            <param name="contentType">Content Type of the request</param>
+            <returns>Object</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.CallApiAsync(System.String,RestSharp.Method,System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}},System.Object,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,RestSharp.FileParameter},System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            Makes the asynchronous HTTP request.
+            </summary>
+            <param name="path">URL path.</param>
+            <param name="method">HTTP method.</param>
+            <param name="queryParams">Query parameters.</param>
+            <param name="postBody">HTTP body (POST request).</param>
+            <param name="headerParams">Header parameters.</param>
+            <param name="formParams">Form parameters.</param>
+            <param name="fileParams">File parameters.</param>
+            <param name="pathParams">Path parameters.</param>
+            <param name="contentType">Content type.</param>
+            <returns>The Task instance.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.EscapeString(System.String)">
+            <summary>
+            Escape string (url-encoded).
+            </summary>
+            <param name="str">String to be escaped.</param>
+            <returns>Escaped string.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.ParameterToFile(System.String,System.IO.Stream)">
+            <summary>
+            Create FileParameter based on Stream.
+            </summary>
+            <param name="name">Parameter name.</param>
+            <param name="stream">Input stream.</param>
+            <returns>FileParameter.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.ParameterToString(System.Object)">
+            <summary>
+            If parameter is DateTime, output in a formatted string (default ISO 8601), customizable with Configuration.DateTime.
+            If parameter is a list, join the list with ",".
+            Otherwise just return the string.
+            </summary>
+            <param name="obj">The parameter (header, path, query, form).</param>
+            <returns>Formatted string.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.Deserialize(RestSharp.IRestResponse,System.Type)">
+            <summary>
+            Deserialize the JSON string into a proper object.
+            </summary>
+            <param name="response">The HTTP response.</param>
+            <param name="type">Object type.</param>
+            <returns>Object representation of the JSON string.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.Serialize(System.Object)">
+            <summary>
+            Serialize an input (model) into JSON string
+            </summary>
+            <param name="obj">Object.</param>
+            <returns>JSON string.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.IsJsonMime(System.String)">
+             <summary>
+            Check if the given MIME is a JSON MIME.
+            JSON MIME examples:
+                application/json
+                application/json; charset=UTF8
+                APPLICATION/JSON
+                application/vnd.company+json
+             </summary>
+             <param name="mime">MIME</param>
+             <returns>Returns True if MIME type is json.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.SelectHeaderContentType(System.String[])">
+            <summary>
+            Select the Content-Type header's value from the given content-type array:
+            if JSON type exists in the given array, use it;
+            otherwise use the first one defined in 'consumes'
+            </summary>
+            <param name="contentTypes">The Content-Type array to select from.</param>
+            <returns>The Content-Type header to use.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.SelectHeaderAccept(System.String[])">
+            <summary>
+            Select the Accept header's value from the given accepts array:
+            if JSON exists in the given array, use it;
+            otherwise use all of them (joining into a string)
+            </summary>
+            <param name="accepts">The accepts array to select from.</param>
+            <returns>The Accept header to use.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.Base64Encode(System.String)">
+            <summary>
+            Encode string in base64 format.
+            </summary>
+            <param name="text">String to be encoded.</param>
+            <returns>Encoded string.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.ConvertType(System.Object,System.Type)">
+            <summary>
+            Dynamically cast the object into target type.
+            </summary>
+            <param name="fromObject">Object to be casted</param>
+            <param name="toObject">Target type</param>
+            <returns>Casted object</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.ReadAsBytes(System.IO.Stream)">
+            <summary>
+            Convert stream to byte array
+            </summary>
+            <param name="inputStream">Input stream to be converted</param>
+            <returns>Byte array</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.UrlEncode(System.String)">
+            <summary>
+            URL encode a string
+            Credit/Ref: https://github.com/restsharp/RestSharp/blob/master/RestSharp/Extensions/StringExtensions.cs#L50
+            </summary>
+            <param name="input">String to be URL encoded</param>
+            <returns>Byte array</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.SanitizeFilename(System.String)">
+            <summary>
+            Sanitize filename by removing the path
+            </summary>
+            <param name="filename">Filename</param>
+            <returns>Filename</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.ParameterToKeyValuePairs(System.String,System.String,System.Object)">
+            <summary>
+            Convert params to key/value pairs. 
+            Use collectionFormat to properly format lists and collections.
+            </summary>
+            <param name="name">Key name.</param>
+            <param name="value">Value object.</param>
+            <returns>A list of KeyValuePairs</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiClient.IsCollection(System.Object)">
+            <summary>
+            Check if generic object is a collection.
+            </summary>
+            <param name="value"></param>
+            <returns>True if object is a collection type</returns>
+        </member>
+        <member name="P:IO.Swagger.Client.ApiClient.Configuration">
+            <summary>
+            Gets or sets an instance of the IReadableConfiguration.
+            </summary>
+            <value>An instance of the IReadableConfiguration.</value>
+            <remarks>
+            <see cref="T:IO.Swagger.Client.IReadableConfiguration"/> helps us to avoid modifying possibly global
+            configuration values from within a given client. It does not guarantee thread-safety
+            of the <see cref="P:IO.Swagger.Client.ApiClient.Configuration"/> instance in any way.
+            </remarks>
+        </member>
+        <member name="P:IO.Swagger.Client.ApiClient.RestClient">
+            <summary>
+            Gets or sets the RestClient.
+            </summary>
+            <value>An instance of the RestClient</value>
+        </member>
+        <member name="T:IO.Swagger.Client.ApiException">
+            <summary>
+            API Exception
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.ApiException"/> class.
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.ApiException"/> class.
+            </summary>
+            <param name="errorCode">HTTP status code.</param>
+            <param name="message">Error message.</param>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiException.#ctor(System.Int32,System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.ApiException"/> class.
+            </summary>
+            <param name="errorCode">HTTP status code.</param>
+            <param name="message">Error message.</param>
+            <param name="errorContent">Error content.</param>
+        </member>
+        <member name="P:IO.Swagger.Client.ApiException.ErrorCode">
+            <summary>
+            Gets or sets the error code (HTTP status code)
+            </summary>
+            <value>The error code (HTTP status code).</value>
+        </member>
+        <member name="P:IO.Swagger.Client.ApiException.ErrorContent">
+            <summary>
+            Gets or sets the error content (body json object)
+            </summary>
+            <value>The error content (Http response body).</value>
+        </member>
+        <member name="T:IO.Swagger.Client.ApiResponse`1">
+            <summary>
+            API Response
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.ApiResponse`1.#ctor(System.Int32,System.Collections.Generic.IDictionary{System.String,System.String},`0)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.ApiResponse`1"/> class.
+            </summary>
+            <param name="statusCode">HTTP status code.</param>
+            <param name="headers">HTTP headers.</param>
+            <param name="data">Data (parsed HTTP body)</param>
+        </member>
+        <member name="P:IO.Swagger.Client.ApiResponse`1.StatusCode">
+            <summary>
+            Gets or sets the status code (HTTP status code)
+            </summary>
+            <value>The status code.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.ApiResponse`1.Headers">
+            <summary>
+            Gets or sets the HTTP headers
+            </summary>
+            <value>HTTP headers</value>
+        </member>
+        <member name="P:IO.Swagger.Client.ApiResponse`1.Data">
+            <summary>
+            Gets or sets the data (parsed HTTP body)
+            </summary>
+            <value>The data.</value>
+        </member>
+        <member name="T:IO.Swagger.Client.Configuration">
+            <summary>
+            Represents a set of configuration settings
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Client.IReadableConfiguration">
+            <summary>
+            Represents a readable-only configuration contract.
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.IReadableConfiguration.GetApiKeyWithPrefix(System.String)">
+            <summary>
+            Gets the API key with prefix.
+            </summary>
+            <param name="apiKeyIdentifier">API key identifier (authentication scheme).</param>
+            <returns>API key with prefix.</returns>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.AccessToken">
+            <summary>
+            Gets the access token.
+            </summary>
+            <value>Access token.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.ApiKey">
+            <summary>
+            Gets the API key.
+            </summary>
+            <value>API key.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.ApiKeyPrefix">
+            <summary>
+            Gets the API key prefix.
+            </summary>
+            <value>API key prefix.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.BasePath">
+            <summary>
+            Gets the base path.
+            </summary>
+            <value>Base path.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.DateTimeFormat">
+            <summary>
+            Gets the date time format.
+            </summary>
+            <value>Date time foramt.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.DefaultHeader">
+            <summary>
+            Gets the default header.
+            </summary>
+            <value>Default header.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.TempFolderPath">
+            <summary>
+            Gets the temp folder path.
+            </summary>
+            <value>Temp folder path.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.Timeout">
+            <summary>
+            Gets the HTTP connection timeout (in milliseconds)
+            </summary>
+            <value>HTTP connection timeout.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.UserAgent">
+            <summary>
+            Gets the user agent.
+            </summary>
+            <value>User agent.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.Username">
+            <summary>
+            Gets the username.
+            </summary>
+            <value>Username.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.IReadableConfiguration.Password">
+            <summary>
+            Gets the password.
+            </summary>
+            <value>Password.</value>
+        </member>
+        <member name="F:IO.Swagger.Client.Configuration.Version">
+            <summary>
+            Version of the package.
+            </summary>
+            <value>Version of the package.</value>
+        </member>
+        <member name="F:IO.Swagger.Client.Configuration.ISO8601_DATETIME_FORMAT">
+            <summary>
+            Identifier for ISO 8601 DateTime Format
+            </summary>
+            <remarks>See https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx#Anchor_8 for more information.</remarks>
+        </member>
+        <member name="F:IO.Swagger.Client.Configuration.DefaultExceptionFactory">
+            <summary>
+            Default creation of exceptions for a given method name and response object
+            </summary>
+        </member>
+        <member name="F:IO.Swagger.Client.Configuration._apiKey">
+            <summary>
+            Gets or sets the API key based on the authentication name.
+            </summary>
+            <value>The API key.</value>
+        </member>
+        <member name="F:IO.Swagger.Client.Configuration._apiKeyPrefix">
+            <summary>
+            Gets or sets the prefix (e.g. Token) of the API key based on the authentication name.
+            </summary>
+            <value>The prefix of the API key.</value>
+        </member>
+        <member name="M:IO.Swagger.Client.Configuration.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.Configuration"/> class
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.Configuration.#ctor(System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.Configuration"/> class
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.Configuration.#ctor(IO.Swagger.Client.ApiClient,System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.Configuration"/> class with different settings
+            </summary>
+            <param name="apiClient">Api client</param>
+            <param name="defaultHeader">Dictionary of default HTTP header</param>
+            <param name="username">Username</param>
+            <param name="password">Password</param>
+            <param name="accessToken">accessToken</param>
+            <param name="apiKey">Dictionary of API key</param>
+            <param name="apiKeyPrefix">Dictionary of API key prefix</param>
+            <param name="tempFolderPath">Temp folder path</param>
+            <param name="dateTimeFormat">DateTime format string</param>
+            <param name="timeout">HTTP connection timeout (in milliseconds)</param>
+            <param name="userAgent">HTTP user agent</param>
+        </member>
+        <member name="M:IO.Swagger.Client.Configuration.#ctor(IO.Swagger.Client.ApiClient)">
+            <summary>
+            Initializes a new instance of the Configuration class.
+            </summary>
+            <param name="apiClient">Api client.</param>
+        </member>
+        <member name="M:IO.Swagger.Client.Configuration.GetApiKeyWithPrefix(System.String)">
+            <summary>
+            Gets the API key with prefix.
+            </summary>
+            <param name="apiKeyIdentifier">API key identifier (authentication scheme).</param>
+            <returns>API key with prefix.</returns>
+        </member>
+        <member name="M:IO.Swagger.Client.Configuration.AddDefaultHeader(System.String,System.String)">
+            <summary>
+            Add default header.
+            </summary>
+            <param name="key">Header field name.</param>
+            <param name="value">Header field value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Client.Configuration.CreateApiClient">
+            <summary>
+            Creates a new <see cref="P:IO.Swagger.Client.Configuration.ApiClient"/> based on this <see cref="T:IO.Swagger.Client.Configuration"/> instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Client.Configuration.ToDebugReport">
+            <summary>
+            Returns a string with essential information for debugging.
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.Configuration.AddApiKey(System.String,System.String)">
+            <summary>
+            Add Api Key Header.
+            </summary>
+            <param name="key">Api Key name.</param>
+            <param name="value">Api Key value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IO.Swagger.Client.Configuration.AddApiKeyPrefix(System.String,System.String)">
+            <summary>
+            Sets the API key prefix.
+            </summary>
+            <param name="key">Api Key name.</param>
+            <param name="value">Api Key value.</param>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.Default">
+            <summary>
+            Gets or sets the default Configuration.
+            </summary>
+            <value>Configuration.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.ApiClient">
+            <summary>
+            Gets an instance of an ApiClient for this configuration
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.BasePath">
+            <summary>
+            Gets or sets the base path for API access.
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.DefaultHeader">
+            <summary>
+            Gets or sets the default header.
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.Timeout">
+            <summary>
+            Gets or sets the HTTP timeout (milliseconds) of ApiClient. Default to 100000 milliseconds.
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.UserAgent">
+            <summary>
+            Gets or sets the HTTP user agent.
+            </summary>
+            <value>Http user agent.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.Username">
+            <summary>
+            Gets or sets the username (HTTP basic authentication).
+            </summary>
+            <value>The username.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.Password">
+            <summary>
+            Gets or sets the password (HTTP basic authentication).
+            </summary>
+            <value>The password.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.AccessToken">
+            <summary>
+            Gets or sets the access token for OAuth2 authentication.
+            </summary>
+            <value>The access token.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.TempFolderPath">
+            <summary>
+            Gets or sets the temporary folder path to store the files downloaded from the server.
+            </summary>
+            <value>Folder path.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.DateTimeFormat">
+            <summary>
+            Gets or sets the the date time format used when serializing in the ApiClient
+            By default, it's set to ISO 8601 - "o", for others see:
+            https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx
+            and https://msdn.microsoft.com/en-us/library/8kb3ddd4(v=vs.110).aspx
+            No validation is done to ensure that the string you're providing is valid
+            </summary>
+            <value>The DateTimeFormat string</value>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.ApiKeyPrefix">
+            <summary>
+            Gets or sets the prefix (e.g. Token) of the API key based on the authentication name.
+            </summary>
+            <value>The prefix of the API key.</value>
+        </member>
+        <member name="P:IO.Swagger.Client.Configuration.ApiKey">
+            <summary>
+            Gets or sets the API key based on the authentication name.
+            </summary>
+            <value>The API key.</value>
+        </member>
+        <member name="T:IO.Swagger.Client.ExceptionFactory">
+            <summary>
+            A delegate to ExceptionFactory method
+            </summary>
+            <param name="methodName">Method name</param>
+            <param name="response">Response</param>
+            <returns>Exceptions</returns>
+        </member>
+        <member name="T:IO.Swagger.Client.GlobalConfiguration">
+            <summary>
+            <see cref="T:IO.Swagger.Client.GlobalConfiguration"/> provides a compile-time extension point for globally configuring
+            API Clients.
+            </summary>
+            <remarks>
+            A customized implementation via partial class may reside in another file and may
+            be excluded from automatic generation via a .swagger-codegen-ignore file.
+            </remarks>
+        </member>
+        <member name="T:IO.Swagger.Client.SwaggerDateConverter">
+            <summary>
+            Formatter for 'date' swagger formats ss defined by full-date - RFC3339
+            see https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Client.SwaggerDateConverter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Client.SwaggerDateConverter"/> class.
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Model.HeartFailureDataModel">
+            <summary>
+            HeartFailureDataModel
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureDataModel.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Single},System.Nullable{System.Int32},System.Nullable{System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.HeartFailureDataModel"/> class.
+            </summary>
+            <param name="id">id (required).</param>
+            <param name="age">age (required).</param>
+            <param name="sex">sex (required).</param>
+            <param name="chestPainType">chestPainType (required).</param>
+            <param name="restingBpS">restingBpS (required).</param>
+            <param name="cholesterol">cholesterol (required).</param>
+            <param name="fastingBloodSugar">fastingBloodSugar (required).</param>
+            <param name="restingEcg">restingEcg (required).</param>
+            <param name="maxHeartRate">maxHeartRate (required).</param>
+            <param name="exerciseAngina">exerciseAngina (required).</param>
+            <param name="oldPeak">oldPeak (required).</param>
+            <param name="stSlope">stSlope (required).</param>
+            <param name="target">target (required).</param>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureDataModel.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureDataModel.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureDataModel.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureDataModel.Equals(IO.Swagger.Model.HeartFailureDataModel)">
+            <summary>
+            Returns true if HeartFailureDataModel instances are equal
+            </summary>
+            <param name="input">Instance of HeartFailureDataModel to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureDataModel.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureDataModel.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.Age">
+            <summary>
+            Gets or Sets Age
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.Sex">
+            <summary>
+            Gets or Sets Sex
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.ChestPainType">
+            <summary>
+            Gets or Sets ChestPainType
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.RestingBpS">
+            <summary>
+            Gets or Sets RestingBpS
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.Cholesterol">
+            <summary>
+            Gets or Sets Cholesterol
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.FastingBloodSugar">
+            <summary>
+            Gets or Sets FastingBloodSugar
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.RestingEcg">
+            <summary>
+            Gets or Sets RestingEcg
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.MaxHeartRate">
+            <summary>
+            Gets or Sets MaxHeartRate
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.ExerciseAngina">
+            <summary>
+            Gets or Sets ExerciseAngina
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.OldPeak">
+            <summary>
+            Gets or Sets OldPeak
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.StSlope">
+            <summary>
+            Gets or Sets StSlope
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureDataModel.Target">
+            <summary>
+            Gets or Sets Target
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Model.HeartFailurePredictionDTO">
+            <summary>
+            HeartFailurePredictionDTO
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionDTO.#ctor(System.Nullable{System.Single},System.String,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Single},System.String,System.String,System.Nullable{System.Single},System.String,System.Nullable{System.Single},System.Nullable{System.Single},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.HeartFailurePredictionDTO"/> class.
+            </summary>
+            <param name="age">age (required).</param>
+            <param name="sex">sex (required).</param>
+            <param name="chestPainType">chestPainType (required).</param>
+            <param name="restingBpS">restingBpS (required).</param>
+            <param name="cholesterol">cholesterol (required).</param>
+            <param name="fastingBloodSugar">fastingBloodSugar (required).</param>
+            <param name="restingEcg">restingEcg (required).</param>
+            <param name="maxHeartRate">maxHeartRate (required).</param>
+            <param name="exerciseAngina">exerciseAngina (required).</param>
+            <param name="oldpeak">oldpeak (required).</param>
+            <param name="sTSlope">sTSlope (required).</param>
+            <param name="target">target (required).</param>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionDTO.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionDTO.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionDTO.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionDTO.Equals(IO.Swagger.Model.HeartFailurePredictionDTO)">
+            <summary>
+            Returns true if HeartFailurePredictionDTO instances are equal
+            </summary>
+            <param name="input">Instance of HeartFailurePredictionDTO to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionDTO.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailurePredictionDTO.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.Age">
+            <summary>
+            Gets or Sets Age
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.Sex">
+            <summary>
+            Gets or Sets Sex
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.ChestPainType">
+            <summary>
+            Gets or Sets ChestPainType
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.RestingBpS">
+            <summary>
+            Gets or Sets RestingBpS
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.Cholesterol">
+            <summary>
+            Gets or Sets Cholesterol
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.FastingBloodSugar">
+            <summary>
+            Gets or Sets FastingBloodSugar
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.RestingEcg">
+            <summary>
+            Gets or Sets RestingEcg
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.MaxHeartRate">
+            <summary>
+            Gets or Sets MaxHeartRate
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.ExerciseAngina">
+            <summary>
+            Gets or Sets ExerciseAngina
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.Oldpeak">
+            <summary>
+            Gets or Sets Oldpeak
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.STSlope">
+            <summary>
+            Gets or Sets STSlope
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailurePredictionDTO.Target">
+            <summary>
+            Gets or Sets Target
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Model.HeartFailureReturnModel">
+            <summary>
+            HeartFailureReturnModel
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureReturnModel.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.HeartFailureReturnModel"/> class.
+            </summary>
+            <param name="totalCases">totalCases (required).</param>
+            <param name="chestPain">chestPain (required).</param>
+            <param name="cholestrol">cholestrol (required).</param>
+            <param name="excerciseEngina">excerciseEngina (required).</param>
+            <param name="heartFailure">heartFailure (required).</param>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureReturnModel.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureReturnModel.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureReturnModel.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureReturnModel.Equals(IO.Swagger.Model.HeartFailureReturnModel)">
+            <summary>
+            Returns true if HeartFailureReturnModel instances are equal
+            </summary>
+            <param name="input">Instance of HeartFailureReturnModel to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureReturnModel.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.HeartFailureReturnModel.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureReturnModel.TotalCases">
+            <summary>
+            Gets or Sets TotalCases
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureReturnModel.ChestPain">
+            <summary>
+            Gets or Sets ChestPain
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureReturnModel.Cholestrol">
+            <summary>
+            Gets or Sets Cholestrol
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureReturnModel.ExcerciseEngina">
+            <summary>
+            Gets or Sets ExcerciseEngina
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.HeartFailureReturnModel.HeartFailure">
+            <summary>
+            Gets or Sets HeartFailure
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Model.PredictionModel">
+            <summary>
+            PredictionModel
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.PredictionModel.#ctor(System.Nullable{System.Single})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.PredictionModel"/> class.
+            </summary>
+            <param name="predictionResult">predictionResult.</param>
+        </member>
+        <member name="M:IO.Swagger.Model.PredictionModel.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.PredictionModel.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.PredictionModel.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.PredictionModel.Equals(IO.Swagger.Model.PredictionModel)">
+            <summary>
+            Returns true if PredictionModel instances are equal
+            </summary>
+            <param name="input">Instance of PredictionModel to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.PredictionModel.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.PredictionModel.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.PredictionModel.PredictionResult">
+            <summary>
+            Gets or Sets PredictionResult
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Model.StrokeDataModel">
+            <summary>
+            StrokeDataModel
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeDataModel.#ctor(System.Nullable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.StrokeDataModel"/> class.
+            </summary>
+            <param name="id">id (required).</param>
+            <param name="gender">gender (required).</param>
+            <param name="age">age (required).</param>
+            <param name="hasHypertension">hasHypertension (required).</param>
+            <param name="hasHeartDisease">hasHeartDisease (required).</param>
+            <param name="everMarried">everMarried (required).</param>
+            <param name="workType">workType (required).</param>
+            <param name="residenceType">residenceType (required).</param>
+            <param name="averageGlucoseLevel">averageGlucoseLevel (required).</param>
+            <param name="bmi">bmi (required).</param>
+            <param name="smokingStatus">smokingStatus (required).</param>
+            <param name="target">target (required).</param>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeDataModel.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeDataModel.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeDataModel.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeDataModel.Equals(IO.Swagger.Model.StrokeDataModel)">
+            <summary>
+            Returns true if StrokeDataModel instances are equal
+            </summary>
+            <param name="input">Instance of StrokeDataModel to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeDataModel.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeDataModel.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.Gender">
+            <summary>
+            Gets or Sets Gender
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.Age">
+            <summary>
+            Gets or Sets Age
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.HasHypertension">
+            <summary>
+            Gets or Sets HasHypertension
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.HasHeartDisease">
+            <summary>
+            Gets or Sets HasHeartDisease
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.EverMarried">
+            <summary>
+            Gets or Sets EverMarried
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.WorkType">
+            <summary>
+            Gets or Sets WorkType
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.ResidenceType">
+            <summary>
+            Gets or Sets ResidenceType
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.AverageGlucoseLevel">
+            <summary>
+            Gets or Sets AverageGlucoseLevel
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.Bmi">
+            <summary>
+            Gets or Sets Bmi
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.SmokingStatus">
+            <summary>
+            Gets or Sets SmokingStatus
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeDataModel.Target">
+            <summary>
+            Gets or Sets Target
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Model.StrokePredictionDTO">
+            <summary>
+            StrokePredictionDTO
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionDTO.#ctor(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.StrokePredictionDTO"/> class.
+            </summary>
+            <param name="gender">gender.</param>
+            <param name="age">age (required).</param>
+            <param name="hasHypertension">hasHypertension (required).</param>
+            <param name="hasHeartDisease">hasHeartDisease (required).</param>
+            <param name="everMarried">everMarried (required).</param>
+            <param name="workType">workType (required).</param>
+            <param name="residenceType">residenceType (required).</param>
+            <param name="averageGlucoseLevel">averageGlucoseLevel (required).</param>
+            <param name="bmi">bmi (required).</param>
+            <param name="smokingStatus">smokingStatus (required).</param>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionDTO.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionDTO.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionDTO.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionDTO.Equals(IO.Swagger.Model.StrokePredictionDTO)">
+            <summary>
+            Returns true if StrokePredictionDTO instances are equal
+            </summary>
+            <param name="input">Instance of StrokePredictionDTO to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionDTO.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokePredictionDTO.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionDTO.Gender">
+            <summary>
+            Gets or Sets Gender
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionDTO.Age">
+            <summary>
+            Gets or Sets Age
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionDTO.HasHypertension">
+            <summary>
+            Gets or Sets HasHypertension
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionDTO.HasHeartDisease">
+            <summary>
+            Gets or Sets HasHeartDisease
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionDTO.EverMarried">
+            <summary>
+            Gets or Sets EverMarried
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionDTO.WorkType">
+            <summary>
+            Gets or Sets WorkType
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionDTO.ResidenceType">
+            <summary>
+            Gets or Sets ResidenceType
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionDTO.AverageGlucoseLevel">
+            <summary>
+            Gets or Sets AverageGlucoseLevel
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionDTO.Bmi">
+            <summary>
+            Gets or Sets Bmi
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokePredictionDTO.SmokingStatus">
+            <summary>
+            Gets or Sets SmokingStatus
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Model.StrokeReturnModel">
+            <summary>
+            StrokeReturnModel
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeReturnModel.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.StrokeReturnModel"/> class.
+            </summary>
+            <param name="totalCases">totalCases (required).</param>
+            <param name="hypertension">hypertension (required).</param>
+            <param name="heartDisease">heartDisease (required).</param>
+            <param name="highBMI">highBMI (required).</param>
+            <param name="smokes">smokes (required).</param>
+            <param name="stroke">stroke (required).</param>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeReturnModel.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeReturnModel.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeReturnModel.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeReturnModel.Equals(IO.Swagger.Model.StrokeReturnModel)">
+            <summary>
+            Returns true if StrokeReturnModel instances are equal
+            </summary>
+            <param name="input">Instance of StrokeReturnModel to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeReturnModel.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.StrokeReturnModel.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeReturnModel.TotalCases">
+            <summary>
+            Gets or Sets TotalCases
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeReturnModel.Hypertension">
+            <summary>
+            Gets or Sets Hypertension
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeReturnModel.HeartDisease">
+            <summary>
+            Gets or Sets HeartDisease
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeReturnModel.HighBMI">
+            <summary>
+            Gets or Sets HighBMI
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeReturnModel.Smokes">
+            <summary>
+            Gets or Sets Smokes
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.StrokeReturnModel.Stroke">
+            <summary>
+            Gets or Sets Stroke
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Model.UserDTO">
+            <summary>
+            UserDTO
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.UserDTO.#ctor(System.String,System.String,System.String,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.UserDTO"/> class.
+            </summary>
+            <param name="firstName">firstName (required).</param>
+            <param name="middleName">middleName.</param>
+            <param name="lastName">lastName (required).</param>
+            <param name="age">age (required).</param>
+            <param name="gender">gender (required).</param>
+        </member>
+        <member name="M:IO.Swagger.Model.UserDTO.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.UserDTO.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.UserDTO.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.UserDTO.Equals(IO.Swagger.Model.UserDTO)">
+            <summary>
+            Returns true if UserDTO instances are equal
+            </summary>
+            <param name="input">Instance of UserDTO to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.UserDTO.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.UserDTO.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.UserDTO.FirstName">
+            <summary>
+            Gets or Sets FirstName
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.UserDTO.MiddleName">
+            <summary>
+            Gets or Sets MiddleName
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.UserDTO.LastName">
+            <summary>
+            Gets or Sets LastName
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.UserDTO.Age">
+            <summary>
+            Gets or Sets Age
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.UserDTO.Gender">
+            <summary>
+            Gets or Sets Gender
+            </summary>
+        </member>
+        <member name="T:IO.Swagger.Model.UserModel">
+            <summary>
+            UserModel
+            </summary>
+        </member>
+        <member name="M:IO.Swagger.Model.UserModel.#ctor(System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IO.Swagger.Model.UserModel"/> class.
+            </summary>
+            <param name="id">id (required).</param>
+            <param name="firstName">firstName (required).</param>
+            <param name="middleName">middleName.</param>
+            <param name="lastName">lastName (required).</param>
+            <param name="age">age (required).</param>
+            <param name="gender">gender (required).</param>
+        </member>
+        <member name="M:IO.Swagger.Model.UserModel.ToString">
+            <summary>
+            Returns the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.UserModel.ToJson">
+            <summary>
+            Returns the JSON string presentation of the object
+            </summary>
+            <returns>JSON string presentation of the object</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.UserModel.Equals(System.Object)">
+            <summary>
+            Returns true if objects are equal
+            </summary>
+            <param name="input">Object to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.UserModel.Equals(IO.Swagger.Model.UserModel)">
+            <summary>
+            Returns true if UserModel instances are equal
+            </summary>
+            <param name="input">Instance of UserModel to be compared</param>
+            <returns>Boolean</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.UserModel.GetHashCode">
+            <summary>
+            Gets the hash code
+            </summary>
+            <returns>Hash code</returns>
+        </member>
+        <member name="M:IO.Swagger.Model.UserModel.System#ComponentModel#DataAnnotations#IValidatableObject#Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            To validate all properties of the instance
+            </summary>
+            <param name="validationContext">Validation context</param>
+            <returns>Validation Result</returns>
+        </member>
+        <member name="P:IO.Swagger.Model.UserModel.Id">
+            <summary>
+            Gets or Sets Id
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.UserModel.FirstName">
+            <summary>
+            Gets or Sets FirstName
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.UserModel.MiddleName">
+            <summary>
+            Gets or Sets MiddleName
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.UserModel.LastName">
+            <summary>
+            Gets or Sets LastName
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.UserModel.Age">
+            <summary>
+            Gets or Sets Age
+            </summary>
+        </member>
+        <member name="P:IO.Swagger.Model.UserModel.Gender">
+            <summary>
+            Gets or Sets Gender
+            </summary>
+        </member>
+    </members>
+</doc>

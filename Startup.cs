@@ -27,7 +27,7 @@ namespace ClassificationApp
         {
              var builder = new SqlConnectionStringBuilder();
             builder.DataSource = Configuration["DB-DataSource"];
-            builder.InitialCatalog = Configuration["DB-InitialCatalog"];
+            builder.InitialCatalog = Configuration["DB-Classification-InitialCatalog"];
             builder.UserID = "bbdazuresqlserveradmin";//Configuration["DB-UserID"];
             builder.Password = "@DmB69SSXeWfge";//Configuration["DB-Password"];
             _connString = builder.ConnectionString;
@@ -48,6 +48,8 @@ namespace ClassificationApp
 
             services.AddHttpClient<IDiagnoseMeClient, DiagnoseMeClient>();
             services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddHttpClient();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
