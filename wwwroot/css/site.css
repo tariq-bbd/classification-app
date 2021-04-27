@@ -22,6 +22,12 @@ nav .active {
 .test {
     color:red
 }
+.marginTop {
+ margin-top: 5px;
+ margin-bottom: 5px;
+font-weight:bolder;
+
+}
 body {
     background-color: rgb(22,17,17);
     display: flex;
