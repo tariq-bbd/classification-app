@@ -97,6 +97,98 @@
             <param name="cholestrolL"></param>
             <returns>ApiResponse of HeartFailureReturnModel</returns>
         </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGet(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>ApiResponse of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGet(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>ApiResponse of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
         <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureNumOfRecordsGet(System.Nullable{System.Int32})">
             <summary>
             Gets n records for heart disease
@@ -118,6 +210,50 @@
             <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
             <param name="numOfRecords"></param>
             <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeMaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokeDataModel&gt;</returns>
         </member>
         <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeNumOfRecordsGet(System.Nullable{System.Int32})">
             <summary>
@@ -155,6 +291,50 @@
         <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeBmiGetWithHttpInfo(System.Nullable{System.Double})">
             <summary>
             Gets Stats for stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>ApiResponse of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeFemaleBmiGet(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeFemaleBmiGetWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>ApiResponse of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeMaleBmiGet(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeMaleBmiGetWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male
             </summary>
             <remarks>
             
@@ -229,6 +409,98 @@
             <param name="cholestrolL"></param>
             <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
         </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetAsync(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetAsync(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
         <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsHeartFailureNumOfRecordsGetAsync(System.Nullable{System.Int32})">
             <summary>
             Gets n records for heart disease
@@ -250,6 +522,50 @@
             <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
             <param name="numOfRecords"></param>
             <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokeDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokeDataModel&gt;)</returns>
         </member>
         <member name="M:IO.Swagger.Api.IDataApi.ApiDataRecordsStrokeNumOfRecordsGetAsync(System.Nullable{System.Int32})">
             <summary>
@@ -287,6 +603,50 @@
         <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
             <summary>
             Gets Stats for stroke
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of ApiResponse (StrokeReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeFemaleBmiGetAsync(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeFemaleBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of ApiResponse (StrokeReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeMaleBmiGetAsync(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male
+            </summary>
+            <remarks>
+            
+            </remarks>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.IDataApi.ApiDataStrokeMaleBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male
             </summary>
             <remarks>
             
@@ -442,6 +802,142 @@
             <param name="cholestrolL"></param>
             <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
         </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGet(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>ApiResponse of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetAsync(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureFemaleChestPainLCholestrolLGetAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGet(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>ApiResponse of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetAsync(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of HeartFailureReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataHeartFailureMaleChestPainLCholestrolLGetAsyncWithHttpInfo(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Gets Stats for heart failure where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="chestPainL"></param>
+            <param name="cholestrolL"></param>
+            <returns>Task of ApiResponse (HeartFailureReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureFemaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;HeartFailureDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureMaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for heart disease where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
         <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsHeartFailureNumOfRecordsGet(System.Nullable{System.Int32})">
             <summary>
             Gets n records for heart disease 
@@ -473,6 +969,70 @@
             <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
             <param name="numOfRecords"></param>
             <returns>Task of ApiResponse (List&lt;HeartFailureDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeFemaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokeDataModel&gt;)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeMaleNumOfRecordsGet(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>ApiResponse of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetAsync(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of List&lt;StrokeDataModel&gt;</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeMaleNumOfRecordsGetAsyncWithHttpInfo(System.Nullable{System.Int32})">
+            <summary>
+            Gets n records for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="numOfRecords"></param>
+            <returns>Task of ApiResponse (List&lt;StrokeDataModel&gt;)</returns>
         </member>
         <member name="M:IO.Swagger.Api.DataApi.ApiDataRecordsStrokeNumOfRecordsGet(System.Nullable{System.Int32})">
             <summary>
@@ -533,6 +1093,70 @@
         <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
             <summary>
             Gets Stats for stroke 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of ApiResponse (StrokeReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeFemaleBmiGet(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeFemaleBmiGetWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>ApiResponse of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeFemaleBmiGetAsync(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeFemaleBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is female 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of ApiResponse (StrokeReturnModel)</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeMaleBmiGet(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeMaleBmiGetWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>ApiResponse of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeMaleBmiGetAsync(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male 
+            </summary>
+            <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
+            <param name="bmi"></param>
+            <returns>Task of StrokeReturnModel</returns>
+        </member>
+        <member name="M:IO.Swagger.Api.DataApi.ApiDataStrokeMaleBmiGetAsyncWithHttpInfo(System.Nullable{System.Double})">
+            <summary>
+            Gets Stats for stroke where the user is male 
             </summary>
             <exception cref="T:IO.Swagger.Client.ApiException">Thrown when fails to make API call</exception>
             <param name="bmi"></param>

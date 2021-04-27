@@ -41,7 +41,9 @@ namespace ClassificationApp.Controllers
             getStrokeDataforBmi(28);
            getNumberofRecordsStroke(15);
             getNumberofRecordsheartFailure(15);
-           
+            getMaleFemaleData();
+
+
             return View();
         }
         public void getHeartData()
@@ -250,6 +252,43 @@ namespace ClassificationApp.Controllers
 
 
 
+
+
+        }
+        public void getMaleFemaleData()
+        {
+            
+            StrokeReturnModel strokeMale =  dataCall.ApiDataStrokeMaleBmiGet(28);
+
+
+            string[] labels = { nameof(strokeMale.HeartDisease), nameof(strokeMale.HighBMI), nameof(strokeMale.Hypertension), nameof(strokeMale.Smokes),  nameof(strokeMale.Stroke) };
+            int?[] data = { strokeMale.HeartDisease, strokeMale.HighBMI, strokeMale.Hypertension, strokeMale.Smokes,  strokeMale.Stroke };
+            ViewBag.strokeMaleLabels = labels;
+            ViewBag.strokeMaleData = data;
+
+            HeartFailureReturnModel heartFailure = dataCall.ApiDataHeartFailureMaleChestPainLCholestrolLGet(1, 250);
+            
+
+            string[] labelsheartFailure = {  nameof(heartFailure.HeartFailure), nameof(heartFailure.Cholestrol), nameof(heartFailure.ChestPain), nameof(heartFailure.ExcerciseEngina) };
+            int?[] dataheartFailure = { heartFailure.HeartFailure, heartFailure.Cholestrol, heartFailure.ChestPain, heartFailure.ExcerciseEngina };
+            ViewBag.heartMaleLabels = labelsheartFailure;
+            ViewBag.heartMaleStats = dataheartFailure;
+            //********************************************female
+            StrokeReturnModel strokemFemale = dataCall.ApiDataStrokeFemaleBmiGet(28);
+
+
+            string[] labelsFemaleheart = { nameof(strokemFemale.HeartDisease), nameof(strokemFemale.HighBMI), nameof(strokemFemale.Hypertension), nameof(strokemFemale.Smokes),  nameof(strokemFemale.Stroke) };
+            int?[] dataFemaleheart = { strokemFemale.HeartDisease, strokemFemale.HighBMI, strokemFemale.Hypertension, strokemFemale.Smokes,  strokemFemale.Stroke };
+            ViewBag.strokeFemaleLabels = labelsFemaleheart;
+            ViewBag.strokemFemaleData = dataFemaleheart;
+
+            HeartFailureReturnModel heartFailurefemale = dataCall.ApiDataHeartFailureFemaleChestPainLCholestrolLGet(1, 250);
+
+
+            string[] labelsfemaleheartFailure = { nameof(heartFailurefemale.HeartFailure), nameof(heartFailurefemale.Cholestrol), nameof(heartFailurefemale.ChestPain), nameof(heartFailurefemale.ExcerciseEngina) };
+            int?[] dataheartfemaleFailure = {  heartFailurefemale.HeartFailure, heartFailurefemale.Cholestrol, heartFailurefemale.ChestPain, heartFailurefemale.ExcerciseEngina };
+            ViewBag.heartFemaleLabels = labelsfemaleheartFailure;
+            ViewBag.heartFemaleStats = dataheartfemaleFailure;
 
 
         }
