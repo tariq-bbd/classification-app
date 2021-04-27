@@ -79,42 +79,7 @@ namespace ClassificationApp.Controllers
         }
         public void getStrokeData(int chest_Pain, int cholesterol)
 
-        {/*
-            if (chest_Pain > 4 || chest_Pain < 0 || cholesterol < 100 || cholesterol > 310)
-            {
-                //set values to proper values within scope
-                chest_Pain = 1;
-                cholesterol = 225;
-
-            }
-            ViewBag.testgetStrokeData = 2;
-            var requestStrokeData = new HttpRequestMessage(HttpMethod.Get,
-           "http://bbd-classification-app-backend.azurewebsites.net/api/data/heart_failure/1/225");
-
-            var client = _clientFactory.CreateClient();
-
-            var StrokeResponse = client.Send(requestStrokeData);
-            if (StrokeResponse.IsSuccessStatusCode)
-            {
-                var responseStream = StrokeResponse.Content.ReadAsStringAsync().Result;
-                dynamic product = new JObject();
-
-               
-                Console.WriteLine("getStrokeData");
-      
-                Console.WriteLine("deserialised data");
-                Console.WriteLine(JsonConvert.DeserializeObject(responseStream));
-
-
-
-                ViewBag.getStrokeData = JsonConvert.DeserializeObject(responseStream);
-
-            }
-            else
-            {
-                Console.WriteLine("getStrokeData");
-                Console.WriteLine(StrokeResponse.ToString());
-            }*/
+        {
             HeartFailureReturnModel myobj = dataCall.ApiDataHeartFailureChestPainLCholestrolLGet(1, 250);
             Console.WriteLine(myobj.ToString());
 
@@ -128,34 +93,7 @@ namespace ClassificationApp.Controllers
         }
         public void getStrokeDataforBmi(int bmi)
         {
-            /*  var requestStrokeDataforBmi = new HttpRequestMessage(HttpMethod.Get,
-             "http://bbd-classification-app-backend.azurewebsites.net/api/data/stroke/25");
-
-              var client = _clientFactory.CreateClient();
-              ViewBag.testgetStrokeDataforBmi = 3;
-
-              var StrokeResponseforBmi = client.Send(requestStrokeDataforBmi);
-              if (StrokeResponseforBmi.IsSuccessStatusCode)
-              {
-                  var responseStream = StrokeResponseforBmi.Content.ReadAsStringAsync().Result;
-
-
-                  Console.WriteLine("getStrokeDataforBmi");
-
-                  Console.WriteLine("deserialised data");
-                  Console.WriteLine(JsonConvert.DeserializeObject(responseStream));
-
-
-
-                  ViewBag.getStrokeDataforBmi = JsonConvert.DeserializeObject(responseStream);
-
-
-              }
-              else
-              {
-                  Console.WriteLine("getStrokeDataforBmi");
-                  Console.WriteLine(StrokeResponseforBmi.ToString());
-              }*/
+            
 
             StrokeReturnModel myobj = dataCall.ApiDataStrokeBmiGet(28);
 
@@ -171,33 +109,7 @@ namespace ClassificationApp.Controllers
         }
         public void getNumberofRecordsStroke(int numberOfRecords)
         {
-            /* ViewBag.testgetNumberofRecordsStroke = 4;
-             var requestStrokeDataAmount = new HttpRequestMessage(HttpMethod.Get,
-            "http://bbd-classification-app-backend.azurewebsites.net/api/data/records/stroke/15");
-
-             var client = _clientFactory.CreateClient();
-
-             var StrokeResponseforAmount = client.Send(requestStrokeDataAmount);
-             if (StrokeResponseforAmount.IsSuccessStatusCode)
-             {
-                 var responseStream = StrokeResponseforAmount.Content.ReadAsStringAsync().Result;
-
-
-                 Console.WriteLine("getNumberofRecordsStroke");
-
-                 Console.WriteLine("deserialised data");
-                 Console.WriteLine(JsonConvert.DeserializeObject(responseStream));
-
-
-
-                 ViewBag.getNumberofRecordsStroke = JsonConvert.DeserializeObject(responseStream);
-
-             }
-             else
-             {
-                 Console.WriteLine("getNumberofRecordsStroke");
-                 Console.WriteLine(StrokeResponseforAmount.ToString()) ;
-             }*/
+            
             //List<HeartFailureDataModel>
             List<StrokeDataModel> myobjs = dataCall.ApiDataRecordsStrokeNumOfRecordsGet(10);
 
@@ -206,37 +118,7 @@ namespace ClassificationApp.Controllers
         }
         public void getNumberofRecordsheartFailure(int numberOfRecords)
         {
-            /*
-            ViewBag.testgetNumberofRecordsheartFailure = 5;
-            var requestHeartFailDataAmount = new HttpRequestMessage(HttpMethod.Get,
-           "http://bbd-classification-app-backend.azurewebsites.net/api/data/records/heartFailure/15");
-
-            var client = _clientFactory.CreateClient();
-
-            var HeartFailResponseforAmount = client.Send(requestHeartFailDataAmount);
-            if (HeartFailResponseforAmount.IsSuccessStatusCode)
-            {
-                var responseStream = HeartFailResponseforAmount.Content.ReadAsStringAsync().Result;
-              
-
-                Console.WriteLine("getNumberofRecordsheartFailure");
-                
-                JObject myobj = JsonConvert.DeserializeObject<>
-                Console.WriteLine(JsonConvert.DeserializeObject(responseStream));
-                Console.WriteLine("Serialised data");
-                Console.WriteLine(JsonConvert.SerializeObject(responseStream));
-
-                //string = JsonConvert.SerializeObject();
-                // JObject myobj = JsonConvert.DeserializeObject<JObject>(responseStream);
-
-                // ViewBag.getNumberofRecordsheartFailure = ;
-
-            }
-            else
-            {
-                Console.WriteLine("getNumberofRecordsheartFailure");
-                Console.WriteLine(HeartFailResponseforAmount.ToString());
-            }*/
+            
 
 
 
@@ -244,13 +126,7 @@ namespace ClassificationApp.Controllers
 
             ViewBag.heartFailQty = myobjs.ToArray();
 
-            /* foreach (HeartFailureDataModel x in myobjs)
-             {
-
-                 Console.WriteLine(nameof(x.Age));
-
-
-             }*/
+           
 
 
 
