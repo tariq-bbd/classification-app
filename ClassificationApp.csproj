@@ -21,4 +21,19 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="IO.Swagger">
+      <HintPath>..\..\..\Downloads\csharp-client-generated (2)\bin\IO.Swagger.dll</HintPath>
+    </Reference>
+    <Reference Include="JsonSubTypes">
+      <HintPath>..\..\..\Downloads\csharp-client-generated (2)\bin\JsonSubTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Downloads\csharp-client-generated (2)\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\..\Downloads\csharp-client-generated (2)\bin\RestSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

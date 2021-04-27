@@ -26,7 +26,7 @@ namespace ClassificationApp
         {
              var builder = new SqlConnectionStringBuilder();
             builder.DataSource = Configuration["DB-DataSource"];
-            builder.InitialCatalog = Configuration["DB-ClassificationDB-InitialCatalog"];
+            builder.InitialCatalog = Configuration["DB-Classification-InitialCatalog"];
             builder.UserID = "bbdazuresqlserveradmin";//Configuration["DB-UserID"];
             builder.Password = "@DmB69SSXeWfge";//Configuration["DB-Password"];
             _connString = builder.ConnectionString;

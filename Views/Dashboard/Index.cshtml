@@ -4,12 +4,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["pieCHart"] = null;
     ViewData["barCHartData"] = 1;//Roep C# method en parse die data in die js
-    var respnse = JsonConvert.SerializeObject(ViewBag.response);
-    var test1 = ViewBag.testgetHeartData;
-    var test2 = ViewBag.testgetStrokeData;
-    var test3 = ViewBag.testgetStrokeDataforBmi;
-    var test4 = ViewBag.testgetNumberofRecordsStroke;
-    var test5 = ViewBag.testgetNumberofRecordsheartFailure;
+    var  respnse = JsonConvert.SerializeObject(ViewBag.response);
+
+    var heartLabels = JsonConvert.SerializeObject(ViewBag.heartLabels);
+    var heartStats = JsonConvert.SerializeObject(ViewBag.heartStats);
+
+   
+
+    var strokeData = JsonConvert.SerializeObject(ViewBag.strokeData);
+    var strokeLabels = JsonConvert.SerializeObject(ViewBag.strokeLabels);
+
+
+    var heartFailQty =ViewBag.heartFailQty;
+    var strokeQty = JsonConvert.SerializeObject(ViewBag.strokeQty);
 
 
 
@@ -19,29 +26,24 @@
     <script src="~/js/Chart.bundle.min.js"></script>
     <script type="text/javascript">
 
-        function testData() {
 
-            console.log(@test1 + " "+ @test2 + " "+@test3 + " "+@test4 + " "+@test5 )
-        }
 
         document.addEventListener('DOMContentLoaded', (event) => {
-            testData()
-            console.log(JSON.parse('@Html.Raw(respnse)'))
+            //console.log(JSON.parse('@Html.Raw(heartFailQty)');
+
 
             var barCHart = document.getElementById('barChart');
-
-
             var bartestChart = new Chart(barCHart, {
                 type: 'polarArea',
                 data: {
-                    labels: ['totalCases', 'chestPain', 'cholestrol', 'excerciseEngina', 'heartFailure'],
+                    labels: JSON.parse('@Html.Raw(heartLabels)'),
                     datasets: [{
                         label: 'Github Stars',
-                        data: [135850, 52122, 148825, 16939, 9763],
+                        data: JSON.parse('@Html.Raw(heartStats)'),
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
-                            'rgb(255, 205, 86)',
+                            'rgb(255, 154, 12)',
                             'rgb(255, 205, 160)',
                             'rgb(255, 205, 86)',
 
@@ -58,15 +60,11 @@
             var bartestChart = new Chart(pieCHart, {
                 type: 'doughnut',
                 data: {
-                    labels: [
-                        'Red',
-                        'Blue',
-                        'Yellow'
-                    ],
+                    labels:JSON.parse('@Html.Raw(strokeLabels)'),
 
                     datasets: [{
                         label: 'My First Dataset',
-                        data: [300, 50, 100],
+                        data: JSON.parse('@Html.Raw(strokeData)'),
                         backgroundColor: [
                             'rgb(255, 99, 132)',
                             'rgb(54, 162, 235)',
@@ -102,29 +100,6 @@
 
             
             <main class="col-md-12 ml-sm-auto col-lg-12  padding-top">
-                <h3>Patients</h3>
-                <hr>
-                <div class="table-responsive">
-                    <table class="table table-light table-striped ">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Position</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>Project Manager</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </div>
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="card">
@@ -137,6 +112,109 @@
                         </div>
                     </div>
                 </div>
+                <hr>
+                <h3>Heart Failure Latest Patients</h3>
+                <hr>
+                <div class="table-responsive">
+                    <table class="table table-light table-striped ">
+                        <thead>
+                            <tr>
+
+                                <th scope="col">Id</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Sex</th>
+                                <th scope="col">ChestPainType</th>
+                                <th scope="col">StSlope</th>
+                                <th scope="col">RestingBpS</th>
+                                <th scope="col">Cholesterol</th>
+                                <th scope="col">FastingBloodSugar</th>
+                                <th scope="col">RestingEcg</th>
+                                <th scope="col">MaxHeartRate</th>
+                                <th scope="col">ExerciseAngina</th>
+                                <th scope="col">OldPeak</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @for (var i = 0; i < heartFailQty.Length; i++)
+                            {
+                                <tr>
+                                    <th scope="row">@i</th>
+                                    <td>@heartFailQty[@i].Id</td>
+                                    <td>@heartFailQty[@i].Age</td>
+                                    <td>@heartFailQty[@i].Sex</td>
+                                    <td>@heartFailQty[@i].ChestPainType</td>
+                                    <td>@heartFailQty[@i].StSlope</td>
+                                    <td>@heartFailQty[@i].RestingBpS</td>
+                                    <td>@heartFailQty[@i].Cholesterol</td>
+                                    <td>@heartFailQty[@i].FastingBloodSugar</td>
+                                    <td>@heartFailQty[@i].RestingEcg</td>
+                                    <td>@heartFailQty[@i].MaxHeartRate</td>
+                                    <td>@heartFailQty[@i].ExerciseAngina</td>
+                                    <td>@heartFailQty[@i].OldPeak</td>
+
+                                </tr>
+                            }
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <hr />
+                <h3>Heart Failure Latest Patients</h3>
+                <hr>
+                <div class="table-responsive">
+                    <table class="table table-light table-striped ">
+                        <thead>
+                            <tr>
+
+                                <th scope="col">Id</th>
+                                <th scope="col">Age</th>
+                                <th scope="col">Sex</th>
+                                <th scope="col">ChestPainType</th>
+                                <th scope="col">StSlope</th>
+                                <th scope="col">RestingBpS</th>
+                                <th scope="col">Cholesterol</th>
+                                <th scope="col">FastingBloodSugar</th>
+                                <th scope="col">RestingEcg</th>
+                                <th scope="col">MaxHeartRate</th>
+                                <th scope="col">ExerciseAngina</th>
+                                <th scope="col">OldPeak</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @for (var i = 0; i < heartFailQty.Length; i++)
+                            {
+                                <tr>
+                                    <th scope="row">@i</th>
+                                    <td>@heartFailQty[@i].Id</td>
+                                    <td>@heartFailQty[@i].Age</td>
+                                    <td>@heartFailQty[@i].Sex</td>
+                                    <td>@heartFailQty[@i].ChestPainType</td>
+                                    <td>@heartFailQty[@i].StSlope</td>
+                                    <td>@heartFailQty[@i].RestingBpS</td>
+                                    <td>@heartFailQty[@i].Cholesterol</td>
+                                    <td>@heartFailQty[@i].FastingBloodSugar</td>
+                                    <td>@heartFailQty[@i].RestingEcg</td>
+                                    <td>@heartFailQty[@i].MaxHeartRate</td>
+                                    <td>@heartFailQty[@i].ExerciseAngina</td>
+                                    <td>@heartFailQty[@i].OldPeak</td>
+
+                                </tr>
+                            }
+
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
 
 
             </main>

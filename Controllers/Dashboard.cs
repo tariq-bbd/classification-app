@@ -9,6 +9,10 @@ using System.Text.Json;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Microsoft.AspNetCore.Authorization;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
 
 namespace ClassificationApp.Controllers
 {
@@ -16,21 +20,28 @@ namespace ClassificationApp.Controllers
     public class Dashboard : Controller 
     {
         private readonly IHttpClientFactory _clientFactory;
+        private readonly DataApi dataCall;
+        private readonly ApiClient apiClient;
+       
         
         // GET: Dashboard
 
         public Dashboard(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;
+           // apiClient = new ApiClient();
+            dataCall = new DataApi("http://bbd-classification-app-backend.azurewebsites.net/");
+            
         }
         public  ActionResult Index()
         {
 
-           // getHeartData();// all heart stats
-           // getStrokeData(1,225); // heart stats for a given two points
-            //getStrokeDataforBmi(28);
-            //getNumberofRecordsStroke(10);
-            getNumberofRecordsheartFailure(10);
+            // getHeartData();// all heart stats
+             getStrokeData(1,225); // heart stats for a given two points
+            getStrokeDataforBmi(28);
+           getNumberofRecordsStroke(15);
+            getNumberofRecordsheartFailure(15);
+           
             return View();
         }
         public void getHeartData()
@@ -64,7 +75,7 @@ namespace ClassificationApp.Controllers
         }
         public void getStrokeData(int chest_Pain,int cholesterol)
 
-        {
+        {/*
             if (chest_Pain > 4 || chest_Pain < 0 || cholesterol < 100 || cholesterol > 310)
             {
                 //set values to proper values within scope
@@ -99,13 +110,21 @@ namespace ClassificationApp.Controllers
             {
                 Console.WriteLine("getStrokeData");
                 Console.WriteLine(StrokeResponse.ToString());
-            }
+            }*/
+            HeartFailureReturnModel myobj = dataCall.ApiDataHeartFailureChestPainLCholestrolLGet(1, 250);
+            Console.WriteLine(myobj.ToString());
+
+            string[] labels = { nameof(myobj.TotalCases), nameof(myobj.HeartFailure), nameof(myobj.Cholestrol), nameof(myobj.ChestPain), nameof(myobj.ExcerciseEngina) };
+            int ?[] data = { myobj.TotalCases, myobj.HeartFailure, myobj.Cholestrol,myobj.ChestPain, myobj.ExcerciseEngina };
+            ViewBag.heartLabels = labels;
+            ViewBag.heartStats = data;
+            
 
 
         }
         public void getStrokeDataforBmi(int bmi)
         {
-            var requestStrokeDataforBmi = new HttpRequestMessage(HttpMethod.Get,
+          /*  var requestStrokeDataforBmi = new HttpRequestMessage(HttpMethod.Get,
            "http://bbd-classification-app-backend.azurewebsites.net/api/data/stroke/25");
 
             var client = _clientFactory.CreateClient();
@@ -132,46 +151,57 @@ namespace ClassificationApp.Controllers
             {
                 Console.WriteLine("getStrokeDataforBmi");
                 Console.WriteLine(StrokeResponseforBmi.ToString());
-            }
+            }*/
+            
+              StrokeReturnModel  myobj = dataCall.ApiDataStrokeBmiGet(28);
 
+           
+
+            string[] labels = { nameof(myobj.HeartDisease), nameof(myobj.HighBMI), nameof(myobj.Hypertension), nameof(myobj.Smokes), nameof(myobj.TotalCases),nameof(myobj.Stroke) };
+            int?[] data = { myobj.HeartDisease, myobj.HighBMI, myobj.Hypertension, myobj.Smokes, myobj.TotalCases, myobj.Stroke };
+            ViewBag.strokeLabels = labels;
+            ViewBag.strokeData = data;
 
 
 
         }
         public void getNumberofRecordsStroke(int numberOfRecords)
         {
-            ViewBag.testgetNumberofRecordsStroke = 4;
-            var requestStrokeDataAmount = new HttpRequestMessage(HttpMethod.Get,
-           "http://bbd-classification-app-backend.azurewebsites.net/api/data/records/stroke/15");
+            /* ViewBag.testgetNumberofRecordsStroke = 4;
+             var requestStrokeDataAmount = new HttpRequestMessage(HttpMethod.Get,
+            "http://bbd-classification-app-backend.azurewebsites.net/api/data/records/stroke/15");
 
-            var client = _clientFactory.CreateClient();
+             var client = _clientFactory.CreateClient();
 
-            var StrokeResponseforAmount = client.Send(requestStrokeDataAmount);
-            if (StrokeResponseforAmount.IsSuccessStatusCode)
-            {
-                var responseStream = StrokeResponseforAmount.Content.ReadAsStringAsync().Result;
-
-               
-                Console.WriteLine("getNumberofRecordsStroke");
-              
-                Console.WriteLine("deserialised data");
-                Console.WriteLine(JsonConvert.DeserializeObject(responseStream));
+             var StrokeResponseforAmount = client.Send(requestStrokeDataAmount);
+             if (StrokeResponseforAmount.IsSuccessStatusCode)
+             {
+                 var responseStream = StrokeResponseforAmount.Content.ReadAsStringAsync().Result;
 
 
+                 Console.WriteLine("getNumberofRecordsStroke");
 
-                ViewBag.getNumberofRecordsStroke = JsonConvert.DeserializeObject(responseStream);
+                 Console.WriteLine("deserialised data");
+                 Console.WriteLine(JsonConvert.DeserializeObject(responseStream));
 
-            }
-            else
-            {
-                Console.WriteLine("getNumberofRecordsStroke");
-                Console.WriteLine(StrokeResponseforAmount.ToString()) ;
-            }
 
+
+                 ViewBag.getNumberofRecordsStroke = JsonConvert.DeserializeObject(responseStream);
+
+             }
+             else
+             {
+                 Console.WriteLine("getNumberofRecordsStroke");
+                 Console.WriteLine(StrokeResponseforAmount.ToString()) ;
+             }*/
+            //List<HeartFailureDataModel>
+            List<StrokeDataModel> myobjs = dataCall.ApiDataRecordsStrokeNumOfRecordsGet(10);
+
+            //ViewBag.heartFailQty = myobjs.ToArray();
 
         }
         public void getNumberofRecordsheartFailure(int numberOfRecords) {
-
+            /*
             ViewBag.testgetNumberofRecordsheartFailure = 5;
             var requestHeartFailDataAmount = new HttpRequestMessage(HttpMethod.Get,
            "http://bbd-classification-app-backend.azurewebsites.net/api/data/records/heartFailure/15");
@@ -186,7 +216,7 @@ namespace ClassificationApp.Controllers
 
                 Console.WriteLine("getNumberofRecordsheartFailure");
                 
-                Console.WriteLine("deserialised data");
+                JObject myobj = JsonConvert.DeserializeObject<>
                 Console.WriteLine(JsonConvert.DeserializeObject(responseStream));
                 Console.WriteLine("Serialised data");
                 Console.WriteLine(JsonConvert.SerializeObject(responseStream));
@@ -201,7 +231,25 @@ namespace ClassificationApp.Controllers
             {
                 Console.WriteLine("getNumberofRecordsheartFailure");
                 Console.WriteLine(HeartFailResponseforAmount.ToString());
-            }
+            }*/
+           
+
+           
+           List<HeartFailureDataModel>  myobjs = dataCall.ApiDataRecordsHeartFailureNumOfRecordsGet(numberOfRecords);
+
+            ViewBag.heartFailQty = myobjs.ToArray();
+
+            /* foreach (HeartFailureDataModel x in myobjs)
+             {
+
+                 Console.WriteLine(nameof(x.Age));
+
+
+             }*/
+
+
+
+
 
 
         }
