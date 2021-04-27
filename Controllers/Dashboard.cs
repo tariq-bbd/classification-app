@@ -195,9 +195,9 @@ namespace ClassificationApp.Controllers
                  Console.WriteLine(StrokeResponseforAmount.ToString()) ;
              }*/
             //List<HeartFailureDataModel>
-          //  List<StrokeDataModel> myobjs = dataCall.ApiDataRecordsStrokeNumOfRecordsGet(10);
+            List<StrokeDataModel> myobjs = dataCall.ApiDataRecordsStrokeNumOfRecordsGet(10);
 
-            //ViewBag.heartFailQty = myobjs.ToArray();
+            ViewBag.strokeQty = myobjs.ToArray();
 
         }
         public void getNumberofRecordsheartFailure(int numberOfRecords) {

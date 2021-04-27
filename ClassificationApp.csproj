@@ -23,16 +23,20 @@
 
   <ItemGroup>
     <Reference Include="IO.Swagger">
-      <HintPath>..\..\..\Downloads\csharp-client-generated (2)\bin\IO.Swagger.dll</HintPath>
+      <HintPath>Libraries\IO.Swagger.dll</HintPath>
+      <Private>true</Private>
     </Reference>
     <Reference Include="JsonSubTypes">
-      <HintPath>..\..\..\Downloads\csharp-client-generated (2)\bin\JsonSubTypes.dll</HintPath>
+      <HintPath>Libraries\JsonSubTypes.dll</HintPath>
+      <Private>true</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\Downloads\csharp-client-generated (2)\bin\Newtonsoft.Json.dll</HintPath>
+      <HintPath>Libraries\Newtonsoft.Json.dll</HintPath>
+      <Private>true</Private>
     </Reference>
     <Reference Include="RestSharp">
-      <HintPath>..\..\..\Downloads\csharp-client-generated (2)\bin\RestSharp.dll</HintPath>
+      <HintPath>Libraries\RestSharp.dll</HintPath>
+      <Private>true</Private>
     </Reference>
   </ItemGroup>
 

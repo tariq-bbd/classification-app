@@ -16,7 +16,7 @@
 
 
     var heartFailQty =ViewBag.heartFailQty;
-    var strokeQty = JsonConvert.SerializeObject(ViewBag.strokeQty);
+    var strokeQty = ViewBag.strokeQty;
 
 
 
@@ -119,7 +119,7 @@
                     <table class="table table-light table-striped ">
                         <thead>
                             <tr>
-
+                                <th scope="col">Row Number</th>
                                 <th scope="col">Id</th>
                                 <th scope="col">Age</th>
                                 <th scope="col">Sex</th>
@@ -170,42 +170,43 @@
                     <table class="table table-light table-striped ">
                         <thead>
                             <tr>
-
+                                <th scope="col">Row Number</th>
                                 <th scope="col">Id</th>
+                                <th scope="col">Gender</th>
                                 <th scope="col">Age</th>
-                                <th scope="col">Sex</th>
-                                <th scope="col">ChestPainType</th>
-                                <th scope="col">StSlope</th>
-                                <th scope="col">RestingBpS</th>
-                                <th scope="col">Cholesterol</th>
-                                <th scope="col">FastingBloodSugar</th>
-                                <th scope="col">RestingEcg</th>
-                                <th scope="col">MaxHeartRate</th>
-                                <th scope="col">ExerciseAngina</th>
-                                <th scope="col">OldPeak</th>
+                                <th scope="col">Has Hypertension</th>
+                                <th scope="col">Has heart Disease</th>
+                                <th scope="col">Ever Married</th>
+                                <th scope="col">Work Type</th>
+                                <th scope="col">Residence Type</th>
+                                <th scope="col">Average Glucose Level</th>
+                                <th scope="col">Body Mass Index</th>
+                                <th scope="col">Smoking Status</th>
+                               
 
                             </tr>
                         </thead>
                         <tbody>
 
-                            @for (var i = 0; i < heartFailQty.Length; i++)
+                            @for (var i = 0; i < strokeQty.Length; i++)
                             {
-                                <tr>
-                                    <th scope="row">@i</th>
-                                    <td>@heartFailQty[@i].Id</td>
-                                    <td>@heartFailQty[@i].Age</td>
-                                    <td>@heartFailQty[@i].Sex</td>
-                                    <td>@heartFailQty[@i].ChestPainType</td>
-                                    <td>@heartFailQty[@i].StSlope</td>
-                                    <td>@heartFailQty[@i].RestingBpS</td>
-                                    <td>@heartFailQty[@i].Cholesterol</td>
-                                    <td>@heartFailQty[@i].FastingBloodSugar</td>
-                                    <td>@heartFailQty[@i].RestingEcg</td>
-                                    <td>@heartFailQty[@i].MaxHeartRate</td>
-                                    <td>@heartFailQty[@i].ExerciseAngina</td>
-                                    <td>@heartFailQty[@i].OldPeak</td>
+                            <tr>
+                                <th scope="row">@i</th>
+                                <td>@strokeQty[@i].Id</td>
+                                <td>@strokeQty[@i].Gender</td>
+                                <td>@strokeQty[@i].Age</td>
+                                <td>@strokeQty[@i].HasHypertension</td>
+                                <td>@strokeQty[@i].HasHeartDisease</td>
+                                <td>@strokeQty[@i].EverMarried</td>
+                                <td>@strokeQty[@i].WorkType</td>
+                                <td>@strokeQty[@i].ResidenceType</td>
+                                <td>@strokeQty[@i].AverageGlucoseLevel</td>
+                                <td>@strokeQty[@i].Bmi</td>
+                                <td>@strokeQty[@i].SmokingStatus</td>
+                                
 
-                                </tr>
+
+                            </tr>
                             }
 
 
